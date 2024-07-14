@@ -1,0 +1,89 @@
+<main>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar -->
+      <div class="col-md-3">
+        <app-dashboard-sidebar></app-dashboard-sidebar>
+      </div>
+
+      <!-- Main Content -->
+      <main
+        *ngIf="arrFilteredCourse.length == 0"
+        class="empty-dashboard col-md-9 ml-sm-auto col-lg-9 px-md-4"
+        style="padding-top: 0px !important"
+      >
+        <h2>Purchase Assessment To Start Learning!</h2>
+        <img
+          src="assets/images/empty-dashboard.gif"
+          alt="Empty Dashboard"
+          class="empty-dashboard-image"
+        />
+      </main>
+      <main
+        role="main"
+        class="col-md-9 ml-sm-auto col-lg-9 px-md-4"
+        *ngIf="arrFilteredCourse.length != 0"
+      >
+        <div
+          class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
+        >
+          <h2>Edit Assessment Status</h2>
+        </div>
+
+        <!-- Content Cards -->
+        <div class="row">
+          <div class="col-md-4" *ngFor="let assessment of arrFilteredCourse">
+            <div class="card mb-4 shadow-sm">
+              <div class="card-header">
+                <h6 class="my-0 font-weight-normal">
+                  {{ assessment.aName }}
+                </h6>
+              </div>
+              <div class="card-body">
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>{{ assessment.aDes }}</li>
+                  <li>Total Time: {{ assessment.time }}</li>
+                  <li>Total Questions: {{ assessment.itinery.length }}</li>
+                </ul>
+                <button
+                  type="button"
+                  class="btn btn-lg btn-block btn-primary"
+                  (click)="setInactive(assessment.id)"
+                >
+                  <a class="nav-link" *ngIf="assessment.isActive"
+                    >Inactive
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-brightness-low"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8m.5-9.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m0 11a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m5-5a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m-11 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m9.743-4.036a.5.5 0 1 1-.707-.707.5.5 0 0 1 .707.707m-7.779 7.779a.5.5 0 1 1-.707-.707.5.5 0 0 1 .707.707m7.072 0a.5.5 0 1 1 .707-.707.5.5 0 0 1-.707.707M3.757 4.464a.5.5 0 1 1 .707-.707.5.5 0 0 1-.707.707"
+                      /></svg
+                  ></a>
+                  <a class="nav-link" *ngIf="!assessment.isActive"
+                    >Active
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-brightness-low-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0M8.5 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m0 11a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m5-5a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m-11 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m9.743-4.036a.5.5 0 1 1-.707-.707.5.5 0 0 1 .707.707m-7.779 7.779a.5.5 0 1 1-.707-.707.5.5 0 0 1 .707.707m7.072 0a.5.5 0 1 1 .707-.707.5.5 0 0 1-.707.707M3.757 4.464a.5.5 0 1 1 .707-.707.5.5 0 0 1-.707.707"
+                      /></svg
+                  ></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+</main>

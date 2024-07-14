@@ -1,0 +1,52 @@
+/* Styling for Contact Us Page */
+#contactUs-content {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.315);
+
+  width: 60%;
+  height: 80%;
+  margin: auto;
+  margin-bottom: 60px;
+  margin-top: 40px;
+  background-color: #f8f9fa; /* Light gray background */
+  padding: 20px;
+}
+
+#home_text h2 {
+  color: #007bff; /* Blue header text color */
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+.invalid-feedback {
+  color: red;
+}
+
+.btn-primary {
+  border-radius: 0px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.315);
+
+  background-color: #007bff; /* Blue button background */
+  border-color: #007bff; /* Blue button border */
+}
+
+.btn-primary:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  border-color: #0056b3;
+}
+
+h4 {
+  color: #007bff; /* Blue header text color */
+}
+
+p {
+  color: #6c757d; /* Gray paragraph text color */
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .col-md-4 {
+    display: none; /* Hide image column on smaller screens */
+  }
+}

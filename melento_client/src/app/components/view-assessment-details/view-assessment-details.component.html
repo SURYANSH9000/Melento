@@ -1,0 +1,31 @@
+<main>
+    <div class="container text-center" id="assessment_details">
+      <h2>Assessment Details</h2>
+    </div>
+  
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <!-- Left column for image -->
+          <img [src]="assessment.aImgSrc" class="img-fluid" alt="{{ assessment.aName }}" />
+        </div>
+        <div class="col-md-8">
+          <!-- Right column for details -->
+          <div class="assessment-details">
+            <h3>{{ assessment.aName }}</h3>
+            <p>{{ assessment.aDes }}</p>
+            <ul>
+              <li><strong>Price:</strong> {{ assessment.aPrice | currency:'INR' }}</li>
+              <li><strong>Marks:</strong> {{ assessment.marks }}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div style="padding: 10px">
+        <button class="btn btn-success" (click)="displayCartDetails(assessment)">
+            Add to Cart
+          </button>
+        </div>
+    </div>
+  </main>
+  

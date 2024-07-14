@@ -1,0 +1,1610 @@
+[{
+  "_id": "17",
+  "itinery": [
+    {
+      "id": "1",
+      "category": "mcq",
+      "question": "What is the capital of France?",
+      "options": [
+        "Paris",
+        "London",
+        "Berlin",
+        "Madrid"
+      ],
+      "correctAns": "Paris"
+    },
+    {
+      "id": "2",
+      "category": "truefalse",
+      "question": "The Earth is flat.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAns": "False"
+    },
+    {
+      "id": "3",
+      "category": "mcq",
+      "question": "Which planet is known as the Red Planet?",
+      "options": [
+        "Mars",
+        "Venus",
+        "Jupiter",
+        "Saturn"
+      ],
+      "correctAns": "Mars"
+    },
+    {
+      "id": "4",
+      "category": "truefalse",
+      "question": "Water boils at 100 degrees Celsius.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAns": "True"
+    },
+    {
+      "id": "5",
+      "category": "mcq",
+      "question": "What is the largest ocean on Earth?",
+      "options": [
+        "Atlantic Ocean",
+        "Indian Ocean",
+        "Arctic Ocean",
+        "Pacific Ocean"
+      ],
+      "correctAns": "Pacific Ocean"
+    }
+  ],
+  "aName": "Geography Basics",
+  "aDes": "An introductory assessment to basic geography concepts.",
+  "aImgSrc": "assets\\images\\geography.jpg",
+  "aPrice": "30",
+  "marks": "100",
+  "time": "20",
+  "course_id": "101",
+  "faculty_id": "5",
+  "isActive": true
+},
+{
+  "_id": "18",
+  "itinery": [
+    {
+      "id": "1",
+      "category": "mcq",
+      "question": "Who wrote 'To Kill a Mockingbird'?",
+      "options": [
+        "Harper Lee",
+        "Mark Twain",
+        "Ernest Hemingway",
+        "F. Scott Fitzgerald"
+      ],
+      "correctAns": "Harper Lee"
+    },
+    {
+      "id": "2",
+      "category": "truefalse",
+      "question": "The Great Gatsby was written by F. Scott Fitzgerald.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAns": "True"
+    },
+    {
+      "id": "3",
+      "category": "mcq",
+      "question": "In which year was '1984' by George Orwell published?",
+      "options": [
+        "1949",
+        "1950",
+        "1938",
+        "1945"
+      ],
+      "correctAns": "1949"
+    },
+    {
+      "id": "4",
+      "category": "truefalse",
+      "question": "William Shakespeare wrote 'Moby-Dick'.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAns": "False"
+    },
+    {
+      "id": "5",
+      "category": "mcq",
+      "question": "Which of these is a novel by Jane Austen?",
+      "options": [
+        "Pride and Prejudice",
+        "Moby-Dick",
+        "War and Peace",
+        "The Catcher in the Rye"
+      ],
+      "correctAns": "Pride and Prejudice"
+    }
+  ],
+  "aName": "Literature Classics",
+  "aDes": "An assessment covering classic literature.",
+  "aImgSrc": "assets\\images\\literature.jpg",
+  "aPrice": "25",
+  "marks": "100",
+  "time": "15",
+  "course_id": "102",
+  "faculty_id": "6",
+  "isActive": true
+},
+{
+  "_id": "19",
+  "itinery": [
+    {
+      "id": "1",
+      "category": "mcq",
+      "question": "What is the speed of light?",
+      "options": [
+        "299,792,458 m/s",
+        "150,000,000 m/s",
+        "300,000,000 m/s",
+        "3,000,000 m/s"
+      ],
+      "correctAns": "299,792,458 m/s"
+    },
+    {
+      "id": "2",
+      "category": "truefalse",
+      "question": "Protons have a positive charge.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAns": "True"
+    },
+    {
+      "id": "3",
+      "category": "mcq",
+      "question": "Which element has the atomic number 1?",
+      "options": [
+        "Hydrogen",
+        "Helium",
+        "Carbon",
+        "Oxygen"
+      ],
+      "correctAns": "Hydrogen"
+    },
+    {
+      "id": "4",
+      "category": "truefalse",
+      "question": "The chemical symbol for gold is Ag.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAns": "False"
+    },
+    {
+      "id": "5",
+      "category": "mcq",
+      "question": "What is the most abundant gas in the Earth's atmosphere?",
+      "options": [
+        "Oxygen",
+        "Carbon Dioxide",
+        "Nitrogen",
+        "Hydrogen"
+      ],
+      "correctAns": "Nitrogen"
+    }
+  ],
+  "aName": "Basic Physics",
+  "aDes": "An assessment on basic physics concepts.",
+  "aImgSrc": "assets\\images\\physics.jpg",
+  "aPrice": "35",
+  "marks": "100",
+  "time": "25",
+  "course_id": "103",
+  "faculty_id": "7",
+  "isActive": true
+},
+{
+  "_id": "20",
+  "itinery": [
+    {
+      "id": "1",
+      "category": "mcq",
+      "question": "Which of the following is a JavaScript framework?",
+      "options": [
+        "Angular",
+        "Laravel",
+        "Django",
+        "Flask"
+      ],
+      "correctAns": "Angular"
+    },
+    {
+      "id": "2",
+      "category": "truefalse",
+      "question": "JavaScript is a statically typed language.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAns": "False"
+    },
+    {
+      "id": "3",
+      "category": "mcq",
+      "question": "Which method is used to add an element to an array in JavaScript?",
+      "options": [
+        "push()",
+        "add()",
+        "insert()",
+        "append()"
+      ],
+      "correctAns": "push()"
+    },
+    {
+      "id": "4",
+      "category": "truefalse",
+      "question": "In JavaScript, '===' is called a strict equality operator.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAns": "True"
+    },
+    {
+      "id": "5",
+      "category": "mcq",
+      "question": "Which of the following is a JavaScript package manager?",
+      "options": [
+        "npm",
+        "pip",
+        "composer",
+        "gem"
+      ],
+      "correctAns": "npm"
+    }
+  ],
+  "aName": "JavaScript Basics",
+  "aDes": "An assessment covering fundamental JavaScript concepts.",
+  "aImgSrc": "assets\\images\\js.png",
+  "aPrice": "20",
+  "marks": "100",
+  "time": "15",
+  "course_id": "201",
+  "faculty_id": "10",
+  "isActive": true
+},
+{
+  "_id": "21",
+  "itinery": [
+    {
+      "id": "1",
+      "category": "mcq",
+      "question": "Which keyword is used to declare a constant in JavaScript?",
+      "options": [
+        "const",
+        "var",
+        "let",
+        "constant"
+      ],
+      "correctAns": "const"
+    },
+    {
+      "id": "2",
+      "category": "truefalse",
+      "question": "Arrow functions are introduced in ES6.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAns": "True"
+    },
+    {
+      "id": "3",
+      "category": "mcq",
+      "question": "What is the correct syntax to import a module in JavaScript?",
+      "options": [
+        "import moduleName from 'module';",
+        "include module 'module';",
+        "require('module');",
+        "use module 'module';"
+      ],
+      "correctAns": "import moduleName from 'module';"
+    },
+    {
+      "id": "4",
+      "category": "truefalse",
+      "question": "The 'this' keyword refers to the current object in JavaScript.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAns": "True"
+    },
+    {
+      "id": "5",
+      "category": "mcq",
+      "question": "Which of the following is used to parse a JSON string in JavaScript?",
+      "options": [
+        "JSON.parse()",
+        "JSON.stringify()",
+        "parseJSON()",
+        "JSON.toString()"
+      ],
+      "correctAns": "JSON.parse()"
+    }
+  ],
+  "aName": "JavaScript Advanced",
+  "aDes": "An assessment on advanced JavaScript topics.",
+  "aImgSrc": "assets\\images\\advjs.png",
+  "aPrice": "25",
+  "marks": "100",
+  "time": "20",
+  "course_id": "202",
+  "faculty_id": "11",
+  "isActive": true
+},
+{
+  "_id": "22",
+  "itinery": [
+    {
+      "id": "1",
+      "category": "mcq",
+      "question": "Which of the following is a Python framework?",
+      "options": [
+        "Django",
+        "React",
+        "Vue",
+        "Angular"
+      ],
+      "correctAns": "Django"
+    },
+    {
+      "id": "2",
+      "category": "truefalse",
+      "question": "Python supports multiple inheritance.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAns": "True"
+    },
+    {
+      "id": "3",
+      "category": "mcq",
+      "question": "What is the correct file extension for Python files?",
+      "options": [
+        ".py",
+        ".python",
+        ".pt",
+        ".pyt"
+      ],
+      "correctAns": ".py"
+    },
+    {
+      "id": "4",
+      "category": "truefalse",
+      "question": "Python is a case-sensitive language.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAns": "True"
+    },
+    {
+      "id": "5",
+      "category": "mcq",
+      "question": "Which function is used to get the length of a list in Python?",
+      "options": [
+        "len()",
+        "length()",
+        "size()",
+        "count()"
+      ],
+      "correctAns": "len()"
+    }
+  ],
+  "aName": "Python Basics",
+  "aDes": "An assessment covering fundamental Python concepts.",
+  "aImgSrc": "assets\\images\\python.png",
+  "aPrice": "20",
+  "marks": "100",
+  "time": "15",
+  "course_id": "203",
+  "faculty_id": "12",
+  "isActive": true
+},
+{
+  "_id": "23",
+  "itinery": [
+    {
+      "id": "1",
+      "category": "mcq",
+      "question": "Which of these is a CSS framework?",
+      "options": [
+        "Bootstrap",
+        "React",
+        "Laravel",
+        "Vue"
+      ],
+      "correctAns": "Bootstrap"
+    },
+    {
+      "id": "2",
+      "category": "truefalse",
+      "question": "CSS stands for Cascading Style Sheets.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAns": "True"
+    },
+    {
+      "id": "3",
+      "category": "mcq",
+      "question": "Which property is used to change the background color in CSS?",
+      "options": [
+        "background-color",
+        "color",
+        "bg-color",
+        "background"
+      ],
+      "correctAns": "background-color"
+    },
+    {
+      "id": "4",
+      "category": "truefalse",
+      "question": "The CSS property 'font-weight' can accept values such as 'bold' or '100'.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAns": "True"
+    },
+    {
+      "id": "5",
+      "category": "mcq",
+      "question": "Which CSS property is used to change the text color of an element?",
+      "options": [
+        "color",
+        "text-color",
+        "font-color",
+        "foreground"
+      ],
+      "correctAns": "color"
+    }
+  ],
+  "aName": "CSS Basics",
+  "aDes": "An assessment covering fundamental CSS concepts.",
+  "aImgSrc": "assets\\images\\css.png",
+  "aPrice": "15",
+  "marks": "100",
+  "time": "10",
+  "course_id": "204",
+  "faculty_id": "13",
+  "isActive": true
+},
+{
+  "_id": "24",
+  "itinery": [
+    {
+      "id": "1",
+      "category": "mcq",
+      "question": "Which language is used for web development?",
+      "options": [
+        "HTML",
+        "Python",
+        "Java",
+        "C++"
+      ],
+      "correctAns": "HTML"
+    },
+    {
+      "id": "2",
+      "category": "truefalse",
+      "question": "HTML stands for HyperText Markup Language.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAns": "True"
+    },
+    {
+      "id": "3",
+      "category": "mcq",
+      "question": "Which HTML tag is used to define an unordered list?",
+      "options": [
+        "<ul>",
+        "<ol>",
+        "<li>",
+        "<list>"
+      ],
+      "correctAns": "<ul>"
+    },
+    {
+      "id": "4",
+      "category": "truefalse",
+      "question": "The <div> tag in HTML is used to define a division or section in a document.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAns": "True"
+    },
+    {
+      "id": "5",
+      "category": "mcq",
+      "question": "Which HTML attribute is used to define inline styles?",
+      "options": [
+        "style",
+        "class",
+        "id",
+        "css"
+      ],
+      "correctAns": "style"
+    }
+  ],
+  "aName": "HTML Basics",
+  "aDes": "An assessment covering fundamental HTML concepts.",
+  "aImgSrc": "assets\\images\\html.jpg",
+  "aPrice": "10",
+  "marks": "100",
+  "time": "10",
+  "course_id": "205",
+  "faculty_id": "5",
+  "isActive": true
+},
+{
+  "_id": "25",
+  "itinery": [
+    {
+      "id": "1",
+      "category": "mcq",
+      "question": "Which of the following is a valid way to declare a variable in Java?",
+      "options": [
+        "int num;",
+        "var num;",
+        "dim num;",
+        "num := 0;"
+      ],
+      "correctAns": "int num;"
+    },
+    {
+      "id": "2",
+      "category": "truefalse",
+      "question": "Java is a platform-independent language.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAns": "True"
+    },
+    {
+      "id": "3",
+      "category": "mcq",
+      "question": "Which method is used to start a thread in Java?",
+      "options": [
+        "start()",
+        "run()",
+        "init()",
+        "begin()"
+      ],
+      "correctAns": "start()"
+    },
+    {
+      "id": "4",
+      "category": "truefalse",
+      "question": "In Java, the 'final' keyword is used to declare a constant.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAns": "True"
+    },
+    {
+      "id": "5",
+      "category": "mcq",
+      "question": "Which of these is not a valid access modifier in Java?",
+      "options": [
+        "public",
+        "private",
+        "protected",
+        "internal"
+      ],
+      "correctAns": "internal"
+    }
+  ],
+  "aName": "Java Basics",
+  "aDes": "An assessment covering fundamental Java concepts.",
+  "aImgSrc": "assets\\images\\java.jpg",
+  "aPrice": "20",
+  "marks": "100",
+  "time": "15",
+  "course_id": "206",
+  "faculty_id": "15",
+  "isActive": true
+},
+{
+  "_id": "26",
+  "itinery": [
+    {
+      "id": "1",
+      "category": "mcq",
+      "question": "Which command is used to compile a C++ program?",
+      "options": [
+        "g++",
+        "gcc",
+        "javac",
+        "python"
+      ],
+      "correctAns": "g++"
+    },
+    {
+      "id": "2",
+      "category": "truefalse",
+      "question": "C++ supports object-oriented programming.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAns": "True"
+    },
+    {
+      "id": "3",
+      "category": "mcq",
+      "question": "Which of these is used to declare a pointer in C++?",
+      "options": [
+        "*",
+        "&",
+        "#",
+        "@@"
+      ],
+      "correctAns": "*"
+    },
+    {
+      "id": "4",
+      "category": "truefalse",
+      "question": "The 'main' function is the entry point of a C++ program.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAns": "True"
+    },
+    {
+      "id": "5",
+      "category": "mcq",
+      "question": "Which of these operators is used to access members of a class in C++?",
+      "options": [
+        ".",
+        "::",
+        "->",
+        "#"
+      ],
+      "correctAns": "."
+    }
+  ],
+  "aName": "C++ Basics",
+  "aDes": "An assessment covering fundamental C++ concepts.",
+  "aImgSrc": "cpp.jpg",
+  "aPrice": "20",
+  "marks": "100",
+  "time": "15",
+  "course_id": "207",
+  "faculty_id": "16",
+  "isActive": true
+},
+{
+  "_id": "27",
+  "itinery": [
+    {
+      "id": "1",
+      "category": "mcq",
+      "question": "Which function is used to read input from the console in Python?",
+      "options": [
+        "input()",
+        "scanf()",
+        "cin",
+        "read()"
+      ],
+      "correctAns": "input()"
+    },
+    {
+      "id": "2",
+      "category": "truefalse",
+      "question": "In Python, 'elif' is used for an else-if condition.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAns": "True"
+    },
+    {
+      "id": "3",
+      "category": "mcq",
+      "question": "Which of the following is a mutable data type in Python?",
+      "options": [
+        "list",
+        "tuple",
+        "str",
+        "int"
+      ],
+      "correctAns": "list"
+    },
+    {
+      "id": "4",
+      "category": "truefalse",
+      "question": "Python is an interpreted language.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAns": "True"
+    },
+    {
+      "id": "5",
+      "category": "mcq",
+      "question": "Which keyword is used to define a function in Python?",
+      "options": [
+        "def",
+        "func",
+        "function",
+        "define"
+      ],
+      "correctAns": "def"
+    }
+  ],
+  "aName": "Python Intermediate",
+  "aDes": "An assessment covering intermediate Python concepts.",
+  "aImgSrc": "python_intermediate.jpg",
+  "aPrice": "25",
+  "marks": "100",
+  "time": "20",
+  "course_id": "208",
+  "faculty_id": "17",
+  "isActive": true
+},
+{
+  "_id": "28",
+  "itinery": [
+    {
+      "id": "1",
+      "category": "mcq",
+      "question": "Which of these is a front-end framework?",
+      "options": [
+        "Angular",
+        "Spring",
+        "Flask",
+        "Django"
+      ],
+      "correctAns": "Angular"
+    },
+    {
+      "id": "2",
+      "category": "truefalse",
+      "question": "HTML and CSS are used for front-end development.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAns": "True"
+    },
+    {
+      "id": "3",
+      "category": "mcq",
+      "question": "Which language is used for styling web pages?",
+      "options": [
+        "CSS",
+        "JavaScript",
+        "HTML",
+        "Python"
+      ],
+      "correctAns": "CSS"
+    },
+    {
+      "id": "4",
+      "category": "truefalse",
+      "question": "React is maintained by Google.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAns": "False"
+    },
+    {
+      "id": "5",
+      "category": "mcq",
+      "question": "Which of the following is used to structure a web page?",
+      "options": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Python"
+      ],
+      "correctAns": "HTML"
+    }
+  ],
+  "aName": "Front-end Development Basics",
+  "aDes": "An assessment covering fundamental front-end development concepts.",
+  "aImgSrc": "frontend.jpg",
+  "aPrice": "20",
+  "marks": "100",
+  "time": "15",
+  "course_id": "209",
+  "faculty_id": "18",
+  "isActive": true
+},
+{
+  "_id": "29",
+  "itinery": [
+    {
+      "id": "1",
+      "category": "mcq",
+      "question": "Which language is primarily used for server-side scripting?",
+      "options": [
+        "PHP",
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ],
+      "correctAns": "PHP"
+    },
+    {
+      "id": "2",
+      "category": "truefalse",
+      "question": "Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAns": "True"
+    },
+    {
+      "id": "3",
+      "category": "mcq",
+      "question": "Which of these is a backend framework for JavaScript?",
+      "options": [
+        "Express.js",
+        "React.js",
+        "Vue.js",
+        "Angular"
+      ],
+      "correctAns": "Express.js"
+    },
+    {
+      "id": "4",
+      "category": "truefalse",
+      "question": "In Node.js, the 'fs' module is used to handle file system operations.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAns": "True"
+    },
+    {
+      "id": "5",
+      "category": "mcq",
+      "question": "Which of these databases is a NoSQL database?",
+      "options": [
+        "MongoDB",
+        "MySQL",
+        "PostgreSQL",
+        "SQLite"
+      ],
+      "correctAns": "MongoDB"
+    }
+  ],
+  "aName": "Backend Development Basics",
+  "aDes": "An assessment covering fundamental backend development concepts.",
+  "aImgSrc": "backend.jpg",
+  "aPrice": "20",
+  "marks": "100",
+  "time": "15",
+  "course_id": "210",
+  "faculty_id": "19",
+  "isActive": true
+},
+{
+  "_id": "30",
+  "itinery": [
+    {
+      "id": "1",
+      "category": "mcq",
+      "question": "Which language is primarily used for writing iOS applications?",
+      "options": [
+        "Swift",
+        "Kotlin",
+        "Java",
+        "C#"
+      ],
+      "correctAns": "Swift"
+    },
+    {
+      "id": "2",
+      "category": "truefalse",
+      "question": "Swift is an open-source programming language.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAns": "True"
+    },
+    {
+      "id": "3",
+      "category": "mcq",
+      "question": "Which framework is commonly used with Swift for iOS app development?",
+      "options": [
+        "UIKit",
+        "React Native",
+        "Flutter",
+        "Xamarin"
+      ],
+      "correctAns": "UIKit"
+    },
+    {
+      "id": "4",
+      "category": "truefalse",
+      "question": "Xcode is the IDE for iOS development.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAns": "True"
+    },
+    {
+      "id": "5",
+      "category": "mcq",
+      "question": "Which keyword is used to declare a constant in Swift?",
+      "options": [
+        "let",
+        "const",
+        "final",
+        "var"
+      ],
+      "correctAns": "let"
+    }
+  ],
+  "aName": "Swift Programming",
+  "aDes": "An assessment covering fundamental Swift programming concepts.",
+  "aImgSrc": "swift.jpg",
+  "aPrice": "25",
+  "marks": "100",
+  "time": "20",
+  "course_id": "211",
+  "faculty_id": "20",
+  "isActive": true
+},
+{
+  "_id": "31",
+  "itinery": [
+    {
+      "id": "1",
+      "category": "mcq",
+      "question": "Which command is used to install packages in Node.js?",
+      "options": [
+        "npm install",
+        "npm get",
+        "npm add",
+        "npm fetch"
+      ],
+      "correctAns": "npm install"
+    },
+    {
+      "id": "2",
+      "category": "truefalse",
+      "question": "Node.js uses the V8 JavaScript engine.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAns": "True"
+    },
+    {
+      "id": "3",
+      "category": "mcq",
+      "question": "Which module is used to create a web server in Node.js?",
+      "options": [
+        "http",
+        "url",
+        "fs",
+        "path"
+      ],
+      "correctAns": "http"
+    },
+    {
+      "id": "4",
+      "category": "truefalse",
+      "question": "Node.js is a synchronous platform.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAns": "False"
+    },
+    {
+      "id": "5",
+      "category": "mcq",
+      "question": "Which of these is a popular Node.js framework?",
+      "options": [
+        "Express",
+        "Django",
+        "Laravel",
+        "Spring"
+      ],
+      "correctAns": "Express"
+    }
+  ],
+  "aName": "Node.js Fundamentals",
+  "aDes": "An assessment covering fundamental Node.js concepts.",
+  "aImgSrc": "nodejs.jpg",
+  "aPrice": "25",
+  "marks": "100",
+  "time": "20",
+  "course_id": "212",
+  "faculty_id": "21",
+  "isActive": true
+},
+{
+  "_id": "32",
+  "itinery": [
+    {
+      "id": "1",
+      "category": "mcq",
+      "question": "Which of these is a widely used database management system?",
+      "options": [
+        "MySQL",
+        "PHP",
+        "JavaScript",
+        "CSS"
+      ],
+      "correctAns": "MySQL"
+    },
+    {
+      "id": "2",
+      "category": "truefalse",
+      "question": "SQL stands for Structured Query Language.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAns": "True"
+    },
+    {
+      "id": "3",
+      "category": "mcq",
+      "question": "Which command is used to fetch data from a database in SQL?",
+      "options": [
+        "SELECT",
+        "FETCH",
+        "GET",
+        "RETRIEVE"
+      ],
+      "correctAns": "SELECT"
+    },
+    {
+      "id": "4",
+      "category": "truefalse",
+      "question": "MySQL is an example of a NoSQL database.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAns": "False"
+    },
+    {
+      "id": "5",
+      "category": "mcq",
+      "question": "Which clause is used to filter records in SQL?",
+      "options": [
+        "WHERE",
+        "IF",
+        "FILTER",
+        "CONDITION"
+      ],
+      "correctAns": "WHERE"
+    }
+  ],
+  "aName": "SQL Basics",
+  "aDes": "An assessment covering fundamental SQL concepts.",
+  "aImgSrc": "sql.jpg",
+  "aPrice": "20",
+  "marks": "100",
+  "time": "15",
+  "course_id": "213",
+  "faculty_id": "22",
+  "isActive": true
+},
+{
+  "_id": "33",
+  "itinery": [
+    {
+      "id": "1",
+      "category": "mcq",
+      "question": "Which of these is a popular cloud computing platform?",
+      "options": [
+        "AWS",
+        "Node.js",
+        "Docker",
+        "Jenkins"
+      ],
+      "correctAns": "AWS"
+    },
+    {
+      "id": "2",
+      "category": "truefalse",
+      "question": "AWS stands for Amazon Web Services.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAns": "True"
+    },
+    {
+      "id": "3",
+      "category": "mcq",
+      "question": "Which service in AWS is used for computing?",
+      "options": [
+        "EC2",
+        "S3",
+        "RDS",
+        "IAM"
+      ],
+      "correctAns": "EC2"
+    },
+    {
+      "id": "4",
+      "category": "truefalse",
+      "question": "S3 is used for storage in AWS.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAns": "True"
+    },
+    {
+      "id": "5",
+      "category": "mcq",
+      "question": "Which AWS service is used for database management?",
+      "options": [
+        "RDS",
+        "EC2",
+        "S3",
+        "VPC"
+      ],
+      "correctAns": "RDS"
+    }
+  ],
+  "aName": "AWS Basics",
+  "aDes": "An assessment covering fundamental AWS concepts.",
+  "aImgSrc": "aws.jpg",
+  "aPrice": "30",
+  "marks": "100",
+  "time": "25",
+  "course_id": "214",
+  "faculty_id": "23",
+  "isActive": true
+},
+{
+  "_id": "34",
+  "itinery": [
+    {
+      "id": "1",
+      "category": "mcq",
+      "question": "Which of these is a front-end JavaScript framework?",
+      "options": [
+        "React",
+        "Django",
+        "Flask",
+        "Laravel"
+      ],
+      "correctAns": "React"
+    },
+    {
+      "id": "2",
+      "category": "truefalse",
+      "question": "React is developed and maintained by Facebook.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAns": "True"
+    },
+    {
+      "id": "3",
+      "category": "mcq",
+      "question": "Which of these is used to handle component states in React?",
+      "options": [
+        "useState",
+        "useEffect",
+        "useContext",
+        "useRef"
+      ],
+      "correctAns": "useState"
+    },
+    {
+      "id": "4",
+      "category": "truefalse",
+      "question": "React uses a virtual DOM to improve performance.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAns": "True"
+    },
+    {
+      "id": "5",
+      "category": "mcq",
+      "question": "Which method is used to create a class component in React?",
+      "options": [
+        "extends React.Component",
+        "createClass",
+        "ReactClass",
+        "defineComponent"
+      ],
+      "correctAns": "extends React.Component"
+    }
+  ],
+  "aName": "React Basics",
+  "aDes": "An assessment covering fundamental React concepts.",
+  "aImgSrc": "react.jpg",
+  "aPrice": "25",
+  "marks": "100",
+  "time": "20",
+  "course_id": "215",
+  "faculty_id": "24",
+  "isActive": true
+},
+{
+  "_id": "35",
+  "itinery": [
+    {
+      "id": "1",
+      "category": "mcq",
+      "question": "Which of the following is a popular CSS framework?",
+      "options": [
+        "Bootstrap",
+        "Django",
+        "React",
+        "Angular"
+      ],
+      "correctAns": "Bootstrap"
+    },
+    {
+      "id": "2",
+      "category": "truefalse",
+      "question": "Bootstrap is developed by Twitter.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAns": "True"
+    },
+    {
+      "id": "3",
+      "category": "mcq",
+      "question": "Which class in Bootstrap is used to create a button?",
+      "options": [
+        "btn",
+        "button",
+        "btn-primary",
+        "button-primary"
+      ],
+      "correctAns": "btn"
+    },
+    {
+      "id": "4",
+      "category": "truefalse",
+      "question": "Bootstrap uses a mobile-first approach.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAns": "True"
+    },
+    {
+      "id": "5",
+      "category": "mcq",
+      "question": "Which Bootstrap class is used for a responsive grid layout?",
+      "options": [
+        "container",
+        "grid",
+        "layout",
+        "grid-container"
+      ],
+      "correctAns": "container"
+    }
+  ],
+  "aName": "Bootstrap Basics",
+  "aDes": "An assessment covering fundamental Bootstrap concepts.",
+  "aImgSrc": "bootstrap.jpg",
+  "aPrice": "20",
+  "marks": "100",
+  "time": "15",
+  "course_id": "216",
+  "faculty_id": "25",
+  "isActive": true
+},
+{
+  "_id": "36",
+  "itinery": [
+    {
+      "id": "1",
+      "category": "mcq",
+      "question": "Which of the following is a key feature of Docker?",
+      "options": [
+        "Containerization",
+        "Virtualization",
+        "Emulation",
+        "None of the above"
+      ],
+      "correctAns": "Containerization"
+    },
+    {
+      "id": "2",
+      "category": "truefalse",
+      "question": "Docker containers are lightweight and portable.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAns": "True"
+    },
+    {
+      "id": "3",
+      "category": "mcq",
+      "question": "Which command is used to build a Docker image?",
+      "options": [
+        "docker build",
+        "docker create",
+        "docker compile",
+        "docker run"
+      ],
+      "correctAns": "docker build"
+    },
+    {
+      "id": "4",
+      "category": "truefalse",
+      "question": "Docker can only run on Linux operating systems.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAns": "False"
+    },
+    {
+      "id": "5",
+      "category": "mcq",
+      "question": "Which of the following is used to manage multiple Docker containers?",
+      "options": [
+        "Docker Compose",
+        "Docker Hub",
+        "Dockerfile",
+        "Docker Engine"
+      ],
+      "correctAns": "Docker Compose"
+    }
+  ],
+  "aName": "Docker Fundamentals",
+  "aDes": "An assessment covering fundamental Docker concepts.",
+  "aImgSrc": "docker.jpg",
+  "aPrice": "25",
+  "marks": "100",
+  "time": "20",
+  "course_id": "217",
+  "faculty_id": "26",
+  "isActive": true
+},
+{
+  "_id": "37",
+  "itinery": [
+    {
+      "id": "1",
+      "category": "mcq",
+      "question": "Which language is primarily used for Android development?",
+      "options": [
+        "Kotlin",
+        "Swift",
+        "JavaScript",
+        "Python"
+      ],
+      "correctAns": "Kotlin"
+    },
+    {
+      "id": "2",
+      "category": "truefalse",
+      "question": "Kotlin is fully interoperable with Java.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAns": "True"
+    },
+    {
+      "id": "3",
+      "category": "mcq",
+      "question": "Which method is used to start an activity in Android?",
+      "options": [
+        "startActivity",
+        "initActivity",
+        "launchActivity",
+        "beginActivity"
+      ],
+      "correctAns": "startActivity"
+    },
+    {
+      "id": "4",
+      "category": "truefalse",
+      "question": "Android Studio is the official IDE for Android development.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAns": "True"
+    },
+    {
+      "id": "5",
+      "category": "mcq",
+      "question": "Which XML element is used to define a UI layout in Android?",
+      "options": [
+        "LinearLayout",
+        "GridLayout",
+        "FrameLayout",
+        "All of the above"
+      ],
+      "correctAns": "All of the above"
+    }
+  ],
+  "aName": "Android Development",
+  "aDes": "An assessment covering fundamental Android development concepts.",
+  "aImgSrc": "assets\\images\\android.jpg",
+  "aPrice": "30",
+  "marks": "100",
+  "time": "25",
+  "course_id": "218",
+  "faculty_id": "5",
+  "isActive": true
+},
+{
+  "_id": "38",
+  "itinery": [
+    {
+      "id": "1",
+      "category": "mcq",
+      "question": "Which framework is commonly used for building SPAs in Angular?",
+      "options": [
+        "Angular",
+        "React",
+        "Vue",
+        "Backbone"
+      ],
+      "correctAns": "Angular"
+    },
+    {
+      "id": "2",
+      "category": "truefalse",
+      "question": "Angular uses TypeScript as its primary programming language.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAns": "True"
+    },
+    {
+      "id": "3",
+      "category": "mcq",
+      "question": "Which directive is used for two-way data binding in Angular?",
+      "options": [
+        "ngModel",
+        "ngBind",
+        "ngBindModel",
+        "ngTwoWay"
+      ],
+      "correctAns": "ngModel"
+    },
+    {
+      "id": "4",
+      "category": "truefalse",
+      "question": "Angular CLI is a command-line tool used to scaffold and build Angular apps.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAns": "True"
+    },
+    {
+      "id": "5",
+      "category": "mcq",
+      "question": "Which module is used to handle HTTP requests in Angular?",
+      "options": [
+        "HttpClientModule",
+        "HttpModule",
+        "WebRequestModule",
+        "NetworkModule"
+      ],
+      "correctAns": "HttpClientModule"
+    }
+  ],
+  "aName": "Angular Basics",
+  "aDes": "An assessment covering fundamental Angular concepts.",
+  "aImgSrc": "assets\\images\\angular.png",
+  "aPrice": "25",
+  "marks": "100",
+  "time": "20",
+  "course_id": "219",
+  "faculty_id": "5",
+  "isActive": true
+},
+{
+  "_id": "39",
+  "itinery": [
+    {
+      "id": "1",
+      "category": "mcq",
+      "question": "Which library is commonly used for data analysis in Python?",
+      "options": [
+        "Pandas",
+        "Django",
+        "Flask",
+        "Keras"
+      ],
+      "correctAns": "Pandas"
+    },
+    {
+      "id": "2",
+      "category": "truefalse",
+      "question": "Pandas is built on top of the NumPy library.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAns": "True"
+    },
+    {
+      "id": "3",
+      "category": "mcq",
+      "question": "Which function is used to read a CSV file in Pandas?",
+      "options": [
+        "read_csv",
+        "readfile",
+        "load_csv",
+        "csv_read"
+      ],
+      "correctAns": "read_csv"
+    },
+    {
+      "id": "4",
+      "category": "truefalse",
+      "question": "A DataFrame in Pandas is similar to a SQL table.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAns": "True"
+    },
+    {
+      "id": "5",
+      "category": "mcq",
+      "question": "Which method is used to get the basic statistics of a DataFrame?",
+      "options": [
+        "describe",
+        "info",
+        "summary",
+        "stats"
+      ],
+      "correctAns": "describe"
+    }
+  ],
+  "aName": "Pandas for Data Analysis",
+  "aDes": "An assessment covering fundamental concepts of data analysis with Pandas.",
+  "aImgSrc": "assets\\images\\pandas.png",
+  "aPrice": "30",
+  "marks": "100",
+  "time": "25",
+  "course_id": "220",
+  "faculty_id": "29",
+  "isActive": true
+}]

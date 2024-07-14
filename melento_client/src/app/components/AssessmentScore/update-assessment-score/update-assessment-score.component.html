@@ -1,0 +1,13 @@
+<form [formGroup]="criteriaForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="passingPercentage">Passing Percentage:</label>
+    <input
+      id="passingPercentage"
+      formControlName="passingPercentage"
+      type="number"
+    />
+  </div>
+  <button type="submit">Submit</button>
+</form>
+
+<p *ngIf="submittedValue !== null">Submitted Value: {{ submittedValue }}</p>

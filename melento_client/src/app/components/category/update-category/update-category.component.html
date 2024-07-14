@@ -1,0 +1,27 @@
+<div class="container">
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit()" class="needs-validation" novalidate>
+        <div class="form-group col-md-12">
+            <label class="form-group" for="id">Select a Course Category ID for update:</label>
+            <select class="form-select" id="id" formControlName="id" (change)="onChangeType($event)">
+                <option selected>Select a Course Category ID</option>
+                <option *ngFor="let category of arrCategory" [ngValue]="category.id">
+                    {{ category.id }}
+                </option>
+            </select>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label for="categoryDescriptionInput" class="form-label">Course Category Description</label>
+                <textarea id="categoryDescriptionInput" formControlName="categoryDescription" class="form-control" rows="5"
+                    required></textarea>
+                <div *ngIf="submitted && formControl['categoryDescription'].errors?.['required']" class="invalid"
+                    style="background-color: lightcoral; border: 1px solid salmon">
+                    ! Category Description is required!
+                </div>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

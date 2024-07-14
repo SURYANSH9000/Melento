@@ -1,0 +1,28 @@
+<div class="container">
+    <form [formGroup]="addCategoryForm" (ngSubmit)="onSubmit()" class="needs-validation" novalidate>
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label for="categoryIdInput" class="form-label">Category Id</label>
+                <input type="text" id="categoryIdInput" formControlName="categoryId" class="form-control" required />
+                <div *ngIf="submitted && formControl['categoryId'].errors?.['required']" class="invalid"
+                    style="background-color: lightcoral; border: 1px solid salmon">
+                    ! Category Id is required!
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label for="categoryDescriptionInput" class="form-label">Category Description</label>
+                <textarea id="categoryDescriptionInput" formControlName="categoryDescription" class="form-control" rows="5"
+                    required></textarea>
+                <div *ngIf="submitted && formControl['categoryDescription'].errors?.['required']" class="invalid"
+                    style="background-color: lightcoral; border: 1px solid salmon">
+                    ! Category Description is required!
+                </div>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit Form</button>
+    </form>
+</div>

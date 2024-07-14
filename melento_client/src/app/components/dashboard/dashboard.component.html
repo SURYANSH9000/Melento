@@ -1,0 +1,82 @@
+<main>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar -->
+      <div class="col-md-3">
+        <app-dashboard-sidebar></app-dashboard-sidebar>
+      </div>
+      <!-- Main Content -->
+      <main
+        *ngIf="arrAssessment.length == 0"
+        class="empty-dashboard col-md-9 ml-sm-auto col-lg-9 px-md-4"
+      >
+        <h2>Purchase Assessment To Upskill Yourself!</h2>
+        <img
+          src="assets/images/empty-dashboard.gif"
+          alt="Empty Dashboard"
+          class="empty-dashboard-image"
+        />
+      </main>
+
+      <main
+        role="main"
+        class="col-md-9 ml-sm-auto col-lg-9 px-md-4"
+        *ngIf="arrAssessment.length != 0"
+      >
+        <div
+          class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
+        >
+          <h2>Available Assessments</h2>
+        </div>
+
+        <!-- Content Cards -->
+        <div class="row">
+          <div class="col-md-4" *ngFor="let assessment of arrAssessment">
+            <div class="card mb-4 shadow-sm">
+              <div class="card-header">
+                <h6 class="my-0 font-weight-normal">
+                  {{ assessment.aName }}
+                </h6>
+              </div>
+              <div class="card-body">
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>Maximum Marks: {{ assessment.marks }}</li>
+                  <li>Total Time: {{ assessment.time }} min.</li>
+                  <li>Total Questions: {{ assessment.itinery.length }}</li>
+                  <div *ngIf="userPurchases.length > 0">
+                    <!-- Find the quantity of the assessment -->
+                    Attempts Left:
+                    <ng-container *ngIf="userPurchases[0].items">
+                      {{ getAssessmentQuantity(assessment.id) }}
+                    </ng-container>
+                  </div>
+                </ul>
+                <button type="button" class="btn btn-lg btn-block btn-primary">
+                  <a class="nav-link" [routerLink]="['/testScreen']"
+                    >Attempt
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-arrow-right-square-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2zm4.5-6.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1"
+                      /></svg
+                  ></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- Bootstrap JavaScript dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</main>

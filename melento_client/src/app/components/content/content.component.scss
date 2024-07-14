@@ -1,0 +1,109 @@
+main {
+    background-color: #cadcfc;
+  }
+  
+  #banner {
+    background-color: #00246b;
+  }
+  
+  #myTabContent {
+    padding-top: 20px;
+  }
+  
+  #home_text {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  #acordian {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+  }
+  
+  #accordionExample {
+    width: 500px;
+  }
+  
+  #view-more {
+    margin-top: 50px;
+    padding-top: 50px;
+  }
+  
+  .home_card {
+    padding: 20px 20px;
+    width: 370px;
+  }
+  
+  #content_cards {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  
+  #user_action {
+    padding: 15px;
+  }
+  
+  table#assessment-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  table#assessment-table > td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px;
+  }
+  
+  .card {
+    display: inline-block;
+  }
+  
+  #paginator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  iframe {
+    padding-top: 20px;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  #view-details {
+    padding-bottom: 40px;
+  }
+  
+  #admin_crud {
+    height: 220vh;
+  }
+  
+  #contactUs-content {
+    width: 60vw;
+    padding-bottom: 20px;
+  }
+  
+  body > div:first-of-type {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  
+  .table {
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .table th,
+  .table td {
+    text-align: center;
+    vertical-align: middle;
+  }
+  .table th {
+    background-color: #f8f9fa;
+  }
+  

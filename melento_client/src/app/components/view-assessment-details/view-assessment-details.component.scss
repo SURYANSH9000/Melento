@@ -1,0 +1,201 @@
+main {
+  background-color: #cadcfc;
+}
+
+#banner {
+  background-color: #00246b;
+}
+
+#myTabContent {
+  padding-top: 20px;
+}
+
+#home_text {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#acordian {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+#accordionExample {
+  width: 500px;
+}
+
+#view-more {
+  margin-top: 50px;
+  padding-top: 50px;
+}
+
+.home_card {
+  padding: 20px 20px;
+  width: 370px;
+}
+
+#content_cards {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+#user_action {
+  padding: 15px;
+}
+
+table#assessment-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table#assessment-table>td {
+  text-align: center;
+  vertical-align: middle;
+  padding: 10px;
+}
+
+.card {
+  display: inline-block;
+}
+
+#paginator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+iframe {
+  padding-top: 20px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+#view-details {
+  padding-bottom: 40px;
+}
+
+#admin_crud {
+  height: 220vh;
+}
+
+#contactUs-content {
+  width: 60vw;
+  padding-bottom: 20px;
+}
+
+body>div:first-of-type {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.table {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table th,
+.table td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.table th {
+  background-color: #f8f9fa;
+}
+
+.assessment-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+
+  h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+  }
+
+  .details-card {
+    width: 80%;
+    max-width: 600px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+
+    .detail-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      .detail-label {
+        font-weight: bold;
+        color: #555;
+      }
+
+      .detail-value {
+        color: #777;
+      }
+
+      .detail-image {
+        max-width: 100px;
+        height: auto;
+        border-radius: 4px;
+      }
+    }
+  }
+}
+
+#home_text {
+  margin-bottom: 20px;
+
+  h2 {
+    font-size: 28px;
+    color: #333;
+  }
+}
+
+.assessment-details {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+
+  .assessment-img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 8px;
+  }
+
+  .assessment-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  .assessment-description {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 15px;
+  }
+
+  .assessment-price,
+  .assessment-marks,
+  .assessment-id {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+  }
+}

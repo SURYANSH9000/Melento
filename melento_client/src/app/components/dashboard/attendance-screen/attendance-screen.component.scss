@@ -1,0 +1,164 @@
+main {
+  font-size: 0.875rem;
+}
+.sidebar-header {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-header svg {
+  margin-right: 8px;
+}
+
+.sidebar-header h4 {
+  margin: 0;
+}
+
+.col-md-3 {
+  padding-left: 0 !important;
+}
+.sidebar-sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  height: calc(100vh - 48px);
+  padding-top: 0.5rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.sidebar .nav-link {
+  font-weight: 500;
+  color: #333;
+}
+
+.sidebar .nav-link .feather {
+  margin-right: 4px;
+  color: #727272;
+}
+
+.sidebar .nav-link.active {
+  color: #007bff;
+}
+
+.sidebar .nav-link:hover .feather,
+.sidebar .nav-link.active .feather {
+  color: inherit;
+}
+
+.navbar-brand {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.card {
+  border-radius: 0.5rem;
+}
+
+/* Set overall padding and margins */
+.container-fluid {
+  padding-bottom: 20px;
+}
+
+/* Main content area */
+.col-md-9 {
+  padding: 20px;
+}
+
+/* Style for the header */
+.h2 {
+  margin-bottom: 20px;
+}
+
+/* Style for individual cards */
+.card {
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+}
+
+.card-header {
+  background-color: #f0f0f0; /* Lighter gray background for header */
+  padding: 10px;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+/* Button styles */
+.btn-block {
+  width: 100%;
+}
+
+/* Container styling */
+.container {
+  margin-top: 20px;
+}
+
+/* Table styling */
+.table {
+  margin-bottom: 1.5rem;
+  background-color: #fff;
+}
+
+.table th,
+.table td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.table thead th {
+  background-color: #343a40;
+  color: #fff;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(0, 0, 0, 0.075);
+}
+
+/* Pagination styling */
+.pagination {
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.page-item.active .page-link {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #fff;
+}
+
+.page-link {
+  color: #007bff;
+}
+
+.page-link:hover {
+  color: #0056b3;
+  background-color: #e9ecef;
+  border-color: #dee2e6;
+}
+
+.empty-dashboard {
+  text-align: center;
+  margin-top: 50px;
+}
+.empty-dashboard h2 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 20px;
+}
+.empty-dashboard-image {
+  max-width: 65%;
+  height: auto;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out;
+}
+.empty-dashboard-image:hover {
+  transform: scale(1.05);
+}

@@ -1,0 +1,278 @@
+<div class="row" id="banner">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" [routerLink]="['/home']"><img src="assets/images/logo_3.svg" alt="" width="170px"
+          style="margin-left: 10px" /></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="d-flex w-100">
+          <form class="d-flex me-auto" (ngSubmit)="onSearch()">
+            <div class="input-group position-relative" style="height: 2.2rem">
+              <input
+                class="form-control"
+                type="search"
+                placeholder="Search Assessments"
+                aria-label="Search"
+                [(ngModel)]="searchQuery"
+                name="searchQuery"
+                (input)="onInputChange()"
+              />
+              <button
+                class="btn btn-outline-primary"
+                type="button"
+                [disabled]="!searchQuery"
+                (click)="onSearch()"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-search"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                </svg>
+              </button>
+              <ul class="dropdown-menu" *ngIf="filteredAssessments.length > 0">
+                <li *ngFor="let assessment of filteredAssessments" (click)="onSelectAssessment(assessment)">
+                  <a class="dropdown-item">
+                    {{ assessment.aName }}
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </form>
+
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" [routerLink]="['/home']">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="['/about-us']">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="['/assessment']">Assessments</a>
+            </li>
+            <li class="nav-item" *ngIf="isAdminOrFaculty">
+              <a class="nav-link" [routerLink]="['/admin']">
+                {{ userRole.charAt(0).toUpperCase() + userRole.slice(1) }}
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="['/contact-us']">Contact Us</a>
+            </li>
+            <li class="nav-item" *ngIf="isLoggedIn">
+              <div
+                matBadge="{{ totalItems }}"
+                matBadgeOverlap="true"
+                class="demo-section"
+                *ngIf="totalItems > 0"
+              ></div>
+              <a class="nav-link" [routerLink]="['/dashboard']">Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="['/cart']"><svg xmlns="http://www.w3.org/2000/svg" width="22"
+                  height="22" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16" style="padding-bottom: 4px">
+                  <path
+                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
+                </svg></a>
+            </li>
+            <li class="nav-item" *ngIf="!isLoggedIn">
+              <button type="button" id="loginButton" class="btn mr-md-2 mb-md-0 mb-2 btn-outline-dark"
+                data-bs-toggle="modal" data-bs-target="#loginModal">
+                Login
+              </button>
+            </li>
+            <li class="nav-item" *ngIf="!isLoggedIn">
+              <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#registerModal"
+                data-bs-dismiss="modal">
+                Register
+              </button>
+            </li>
+            <li class="nav-item" *ngIf="isLoggedIn">
+              <button type="button" id="loginButton" class="btn btn-dark" (click)="onLogout()" [routerLink]="['/home']">
+                Logout
+              </button>
+            </li>
+          </ul>
+          <!-- Modal -->
+
+          <!-- Login Modal -->
+          <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="loginModalLabel">
+                    Login Form
+                  </h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form [formGroup]="loginForm" (ngSubmit)="onSubmitLogin()">
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Email address</label>
+                      <input type="email" class="form-control" formControlName="email" aria-describedby="emailHelp"
+                        required />
+                      <div *ngIf="
+                          loginForm.get('email')?.touched &&
+                          loginForm.get('email')?.invalid
+                        " class="invalid-feedback">
+                        Please provide a valid email address.
+                      </div>
+                      <div id="emailHelp" class="form-text">
+                        We'll never share your email with anyone else.
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">Password</label>
+                      <input type="password" class="form-control" formControlName="password" required />
+                      <div *ngIf="
+                          loginForm.get('password')?.touched &&
+                          loginForm.get('password')?.invalid
+                        " class="invalid-feedback">
+                        Please provide a password.
+                      </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <p style="padding-right: 20px">
+                    Haven't registered yet? Join Assessments.Co Now!
+                  </p>
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registerModal"
+                    data-bs-dismiss="modal">
+                    Register
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Registration Modal -->
+          <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="registerModalLabel">Register Form</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                    <div class="row mb-3">
+                      <div class="col-md-6">
+                        <label for="firstNameInput" class="form-label">First Name</label>
+                        <input type="text" id="firstNameInput" formControlName="firstName" class="form-control"
+                          required />
+                        <div *ngIf="registerForm.get('firstName')?.touched && registerForm.get('firstName')?.invalid"
+                          class="invalid-feedback">
+                          First Name is required!
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="lastNameInput" class="form-label">Last Name</label>
+                        <input type="text" id="lastNameInput" formControlName="lastName" class="form-control"
+                          required />
+                        <div *ngIf="registerForm.get('lastName')?.touched && registerForm.get('lastName')?.invalid">
+                          Last Name is required!
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mb-3">
+                      <div class="col-md-6">
+                        <label for="emailInput" class="form-label">Email</label>
+                        <input type="email" id="emailInput" formControlName="email" class="form-control" required />
+                        <div *ngIf="registerForm.get('email')?.touched && registerForm.get('email')?.invalid"
+                          class="invalid-feedback">
+                          Email is required and must be a valid email!
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="mobileInput" class="form-label">Mobile</label>
+                        <input type="text" id="mobileInput" formControlName="mobile" class="form-control" required />
+                        <div *ngIf="registerForm.get('mobile')?.touched && registerForm.get('mobile')?.invalid"
+                          class="invalid-feedback">
+                          Mobile is required!
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mb-3">
+                      <div class="col-md-6">
+                        <label for="dobInput" class="form-label">Date of Birth</label>
+                        <input type="date" id="dobInput" formControlName="dob" class="form-control" required />
+                        <div *ngIf="registerForm.get('dob')?.touched && registerForm.get('dob')?.invalid"
+                          class="invalid-feedback">
+                          Date of Birth is required and cannot be in the future!
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mb-3">
+                      <div class="col-md-6">
+                        <label for="passwordInput" class="form-label">Password</label>
+                        <input type="password" id="passwordInput" formControlName="password" class="form-control"
+                          required />
+                        <div *ngIf="registerForm.get('password')?.touched && registerForm.get('password')?.invalid"
+                          class="invalid-feedback">
+                          Password is required!
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="confirmPassword" class="form-label">Confirm Password</label>
+                        <input type="password" id="confirmPassword" formControlName="confirmPassword"
+                          class="form-control" required />
+                        <div
+                          *ngIf="registerForm.get('confirmPassword')?.touched && registerForm.get('confirmPassword')?.invalid || registerForm.errors?.['mismatch']"
+                          class="invalid-feedback">
+                          Confirm Password is required and must match the Password!
+                        </div>
+                      </div>
+                    </div>
+                    <div formGroupName="address">
+                      <div class="row mb-3">
+                        <div class="col-md-6">
+                          <label for="houseNoInput" class="form-label">House Number</label>
+                          <input type="text" id="houseNoInput" formControlName="houseNo" class="form-control" />
+                        </div>
+                        <div class="col-md-6">
+                          <label for="streetInput" class="form-label">Street</label>
+                          <input type="text" id="streetInput" formControlName="street" class="form-control" />
+                        </div>
+                      </div>
+                      <div class="row mb-3">
+                        <div class="col-md-6">
+                          <label for="areaInput" class="form-label">Area</label>
+                          <input type="text" id="areaInput" formControlName="area" class="form-control" />
+                        </div>
+                        <div class="col-md-6">
+                          <label for="stateInput" class="form-label">State</label>
+                          <input type="text" id="stateInput" formControlName="state" class="form-control" />
+                        </div>
+                      </div>
+                      <div class="row mb-3">
+                        <div class="col-md-6">
+                          <label for="countryInput" class="form-label">Country</label>
+                          <input type="text" id="countryInput" formControlName="country" class="form-control" />
+                        </div>
+                        <div class="col-md-6">
+                          <label for="pincodeInput" class="form-label">Pincode</label>
+                          <input type="text" id="pincodeInput" formControlName="pincode" class="form-control" />
+                        </div>
+                      </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>

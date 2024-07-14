@@ -1,0 +1,869 @@
+<main>
+  <div id="content">
+    <div class="container text-center" id="home_text">
+      <h2>Perform Admin Actions</h2>
+    </div>
+    <div class="container" id="admin_crud">
+      <ul
+        class="nav nav-pills justify-content-center mb-3 d-flex justify-content-around"
+        id="myTab"
+        role="tablist"
+      >
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            [ngClass]="{
+              active: userRole === 'admin'
+            }"
+            *ngIf="userRole === 'admin'"
+            id="user-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#user-tab-pane"
+            type="button"
+            role="tab"
+            aria-controls="user-tab-pane"
+            aria-selected="false"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-person-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"
+              />
+            </svg>
+            User
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            *ngIf="userRole === 'admin'"
+            id="course-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#course-tab-pane"
+            type="button"
+            role="tab"
+            aria-controls="course-tab-pane"
+            aria-selected="false"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-journals"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M5 0h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2 2 2 0 0 1-2 2H3a2 2 0 0 1-2-2h1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1H1a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v9a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1H3a2 2 0 0 1 2-2"
+              />
+              <path
+                d="M1 6v-.5a.5.5 0 0 1 1 0V6h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V9h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 2.5v.5H.5a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1H2v-.5a.5.5 0 0 0-1 0"
+              /></svg
+            >Course
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="course-category-tab"
+            *ngIf="userRole === 'admin'"
+            data-bs-toggle="tab"
+            data-bs-target="#course-category-tab-pane"
+            type="button"
+            role="tab"
+            aria-controls="course-category-tab-pane"
+            aria-selected="false"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-journal-bookmark-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M6 1h6v7a.5.5 0 0 1-.757.429L9 7.083 6.757 8.43A.5.5 0 0 1 6 8z"
+              />
+              <path
+                d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2"
+              />
+              <path
+                d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1z"
+              /></svg
+            >Course Category
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            [ngClass]="{
+              'show active': userRole === 'faculty'
+            }"
+            id="assessment-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#assessment-tab-pane"
+            type="button"
+            role="tab"
+            aria-controls="assessment-tab-pane"
+            aria-selected="true"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-person-workspace"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M4 16s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-5.95a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"
+              />
+              <path
+                d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.653a5.4 5.4 0 0 1 1.066-2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v9h-2.219c.554.654.89 1.373 1.066 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2z"
+              />
+            </svg>
+            Assessment
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="assessment-score-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#assessment-score-tab-pane"
+            type="button"
+            role="tab"
+            aria-controls="assessment-score-tab-pane"
+            aria-selected="false"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-clipboard2-data"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M9.5 0a.5.5 0 0 1 .5.5.5.5 0 0 0 .5.5.5.5 0 0 1 .5.5V2a.5.5 0 0 1-.5.5h-5A.5.5 0 0 1 5 2v-.5a.5.5 0 0 1 .5-.5.5.5 0 0 0 .5-.5.5.5 0 0 1 .5-.5z"
+              />
+              <path
+                d="M3 2.5a.5.5 0 0 1 .5-.5H4a.5.5 0 0 0 0-1h-.5A1.5 1.5 0 0 0 2 2.5v12A1.5 1.5 0 0 0 3.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-12A1.5 1.5 0 0 0 12.5 1H12a.5.5 0 0 0 0 1h.5a.5.5 0 0 1 .5.5v12a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5z"
+              />
+              <path
+                d="M10 7a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0zm-6 4a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0zm4-3a1 1 0 0 0-1 1v3a1 1 0 1 0 2 0V9a1 1 0 0 0-1-1"
+              />
+            </svg>
+            Assessment Score
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="report-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#report-tab-pane"
+            type="button"
+            role="tab"
+            aria-controls="report-tab-pane"
+            aria-selected="false"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-graph-up-arrow"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M0 0h1v15h15v1H0zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5"
+              />
+            </svg>
+            Report
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="attendance-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#attendance-tab-pane"
+            type="button"
+            role="tab"
+            aria-controls="attendance-tab-pane"
+            aria-selected="false"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-person-check"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.708l.547.548 1.17-1.951a.5.5 0 1 1 .858.514M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4"
+              />
+              <path
+                d="M8.256 14a4.5 4.5 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10q.39 0 .74.025c.226-.341.496-.65.804-.918Q8.844 9.002 8 9c-5 0-6 3-6 4s1 1 1 1z"
+              />
+            </svg>
+            Attendance
+          </button>
+        </li>
+      </ul>
+      <hr />
+      <div class="tab-content">
+        <!-- User Tab Pane -->
+        <div
+          class="tab-pane fade"
+          [ngClass]="{
+            'show active': userRole === 'admin'
+          }"
+          id="user-tab-pane"
+          role="tabpanel"
+          aria-labelledby="user-tab"
+          tabindex="0"
+        >
+          <div class="container">
+            <ul class="nav nav-pills mb-3" id="user-pills-tab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link active"
+                  id="user-view-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#user-view"
+                  type="button"
+                  role="tab"
+                  aria-controls="user-view"
+                  aria-selected="true"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-eye"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"
+                    />
+                    <path
+                      d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"
+                    />
+                  </svg>
+                  View
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="user-add-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#user-add"
+                  type="button"
+                  role="tab"
+                  aria-controls="user-add"
+                  aria-selected="false"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-plus-circle"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"
+                    />
+                    <path
+                      d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"
+                    />
+                  </svg>
+                  Add
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="user-update-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#user-update"
+                  type="button"
+                  role="tab"
+                  aria-controls="user-update"
+                  aria-selected="false"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-up-circle"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"
+                    />
+                  </svg>
+                  Update
+                </button>
+              </li>
+            </ul>
+            <div class="tab-content" id="user-pills-tabContent">
+              <div
+                class="tab-pane fade show active"
+                id="user-view"
+                role="tabpanel"
+                aria-labelledby="user-view-tab"
+                tabindex="0"
+              >
+                <div>
+                  <div class="d-flex justify-content-center"></div>
+                  <div><app-view-user></app-view-user></div>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="user-add"
+                role="tabpanel"
+                aria-labelledby="user-add-tab"
+                tabindex="0"
+              >
+                <div class="container" style="width: 60%">
+                  <h4>Add User Form</h4>
+                  <app-add-user></app-add-user>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="user-update"
+                role="tabpanel"
+                aria-labelledby="user-update-tab"
+                tabindex="0"
+              >
+                <div class="container" style="width: 60%">
+                  <h4>User Form</h4>
+                  <app-update-user></app-update-user>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course Tab Pane -->
+        <div
+          class="tab-pane fade"
+          id="course-tab-pane"
+          role="tabpanel"
+          aria-labelledby="course-tab"
+          tabindex="0"
+        >
+          <div class="container" style="padding-top: 20px">
+            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link active"
+                  id="pills-course-view-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-course-view"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-course-view"
+                  aria-selected="true"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-eye"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"
+                    />
+                    <path
+                      d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"
+                    />
+                  </svg>
+                  View
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="pills-course-add-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-course-add"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-course-add"
+                  aria-selected="false"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-plus-circle"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"
+                    />
+                    <path
+                      d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"
+                    />
+                  </svg>
+                  Add
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="pills-course-update-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-course-update"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-course-update"
+                  aria-selected="false"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-up-circle"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"
+                    />
+                  </svg>
+                  Update
+                </button>
+              </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+              <div
+                class="tab-pane fade show active"
+                id="pills-course-view"
+                role="tabpanel"
+                aria-labelledby="pills-course-view-tab"
+              >
+                <div>
+                  <div class="d-flex justify-content-center"></div>
+                  <app-view-course></app-view-course>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="pills-course-add"
+                role="tabpanel"
+                aria-labelledby="pills-course-add-tab"
+              >
+                <div class="container" style="width: 60%">
+                  <h4>Add Course Form</h4>
+                  <app-add-course></app-add-course>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="pills-course-update"
+                role="tabpanel"
+                aria-labelledby="pills-course-update-tab"
+              >
+                <app-update-course></app-update-course>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Report Tab Pane -->
+        <div
+          class="tab-pane fade"
+          id="report-tab-pane"
+          role="tabpanel"
+          aria-labelledby="report-tab"
+          tabindex="0"
+        >
+          <app-report></app-report>
+        </div>
+        <!-- Course category Tab Pane -->
+        <div
+          class="tab-pane fade"
+          id="course-category-tab-pane"
+          role="tabpanel"
+          aria-labelledby="course-category-tab"
+          tabindex="0"
+          style="padding-top: 20px"
+        >
+          <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link active"
+                id="pills-course-category-view-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-course-category-view"
+                type="button"
+                role="tab"
+                aria-controls="pills-course-category-view"
+                aria-selected="true"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-eye"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"
+                  />
+                  <path
+                    d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"
+                  />
+                </svg>
+                View
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="pills-course-category-add-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-course-category-add"
+                type="button"
+                role="tab"
+                aria-controls="pills-course-category-add"
+                aria-selected="false"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-plus-circle"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"
+                  />
+                  <path
+                    d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"
+                  />
+                </svg>
+                Add
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="pills-course-category-update-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-course-category-update"
+                type="button"
+                role="tab"
+                aria-controls="pills-course-category-update"
+                aria-selected="false"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-arrow-up-circle"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"
+                  />
+                </svg>
+                Update
+              </button>
+            </li>
+          </ul>
+          <div class="tab-content" id="pills-tabContent">
+            <div
+              class="tab-pane fade show active"
+              id="pills-course-category-view"
+              role="tabpanel"
+              aria-labelledby="pills-course-category-view-tab"
+            >
+              <div>
+                <div class="d-flex justify-content-center">
+                  <h4 class="text-center">Course Category List</h4>
+                </div>
+                <app-view-category></app-view-category>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="pills-course-category-add"
+              role="tabpanel"
+              aria-labelledby="pills-course-category-add-tab"
+            >
+              <div class="container" style="width: 60%">
+                <h4>Add Course Category Form</h4>
+                <app-add-category></app-add-category>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="pills-course-category-update"
+              role="tabpanel"
+              aria-labelledby="pills-course-category-update-tab"
+            >
+              <app-update-category></app-update-category>
+            </div>
+          </div>
+        </div>
+
+        <!-- Assessment Tab Pane -->
+        <div
+          class="tab-pane fade"
+          [ngClass]="{
+            'show active': userRole === 'faculty'
+          }"
+          id="assessment-tab-pane"
+          role="tabpanel"
+          aria-labelledby="assessment-tab"
+          tabindex="0"
+          style="padding-top: 20px"
+        >
+          <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link active"
+                id="pills-assessment-view-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-assessment-view"
+                type="button"
+                role="tab"
+                aria-controls="pills-assessment-view"
+                aria-selected="true"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-eye"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"
+                  />
+                  <path
+                    d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"
+                  />
+                </svg>
+                View
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="pills-assessment-add-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-assessment-add"
+                type="button"
+                role="tab"
+                aria-controls="pills-assessment-add"
+                aria-selected="false"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-plus-circle"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"
+                  />
+                  <path
+                    d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"
+                  />
+                </svg>
+                Add
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="pills-assessment-update-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-assessment-update"
+                type="button"
+                role="tab"
+                aria-controls="pills-assessment-update"
+                aria-selected="false"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-arrow-up-circle"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"
+                  />
+                </svg>
+                Update
+              </button>
+            </li>
+          </ul>
+
+          <div class="tab-content" id="pills-tabContent">
+            <div
+              class="tab-pane fade show active"
+              id="pills-assessment-view"
+              role="tabpanel"
+              aria-labelledby="pills-assessment-view-tab"
+            >
+              <app-view-assessment
+                [adminproducts]="filteredAssessments"
+              ></app-view-assessment>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="pills-assessment-add"
+              role="tabpanel"
+              aria-labelledby="pills-assessment-add-tab"
+            >
+              <app-add-assessment></app-add-assessment>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="pills-assessment-update"
+              role="tabpanel"
+              aria-labelledby="pills-assessment-update-tab"
+            >
+              <app-update-assessment></app-update-assessment>
+            </div>
+          </div>
+        </div>
+
+        <!-- Assessment Score Tab Pane -->
+        <div
+          class="tab-pane fade"
+          id="assessment-score-tab-pane"
+          role="tabpanel"
+          aria-labelledby="assessment-score-tab"
+          tabindex="0"
+          style="padding-top: 20px"
+        >
+          <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link active"
+                id="pills-assessment-score-view-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-assessment-score-view"
+                type="button"
+                role="tab"
+                aria-controls="pills-assessment-score-view"
+                aria-selected="true"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-eye"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"
+                  />
+                  <path
+                    d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"
+                  />
+                </svg>
+                View
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="pills-assessment-score-update-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-assessment-score-update"
+                type="button"
+                role="tab"
+                aria-controls="pills-assessment-score-update"
+                aria-selected="false"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-arrow-up-circle"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"
+                  />
+                </svg>
+                Update
+              </button>
+            </li>
+          </ul>
+          <div class="tab-content" id="pills-tabContent">
+            <div
+              class="tab-pane fade show active"
+              id="pills-assessment-score-view"
+              role="tabpanel"
+              aria-labelledby="pills-assessment-score-view-tab"
+            >
+              <app-view-assessment-score
+                [adminScore]="assessmentScores"
+              ></app-view-assessment-score>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="pills-assessment-score-update"
+              role="tabpanel"
+              aria-labelledby="pills-assessment-score-update-tab"
+            >
+              <app-update-assessment-score></app-update-assessment-score>
+            </div>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="attendance-tab-pane"
+          role="tabpanel"
+          aria-labelledby="attendance-tab"
+          tabindex="0"
+        >
+          <app-attendance></app-attendance>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

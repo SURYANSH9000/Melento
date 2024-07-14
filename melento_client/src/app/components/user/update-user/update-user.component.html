@@ -1,0 +1,147 @@
+<div class="container">
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm.value)" class="needs-validation" novalidate>
+    <div class="form-group mb-3">
+      <label for="id" class="form-label">Select a user for update:</label>
+      <select class="form-select" id="id" formControlName="id" (change)="onChangeType($event)" required>
+        <option selected>Select a user</option>
+        <option *ngFor="let user of arrUsers" [ngValue]="user.id">
+          {{ user.fName }} {{ user.lName }}
+        </option>
+      </select>
+      <div *ngIf="submitted && formControl['id'].errors?.['required']" class="invalid-feedback">
+        ! Please select a user!
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label for="firstNameInput" class="form-label">First Name</label>
+        <input type="text" id="firstNameInput" formControlName="firstName" class="form-control" required />
+        <div *ngIf="submitted && formControl['firstName'].errors?.['required']" class="invalid-feedback">
+          ! First Name is required!
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="lastNameInput" class="form-label">Last Name</label>
+        <input type="text" id="lastNameInput" formControlName="lastName" class="form-control" required />
+        <div *ngIf="submitted && formControl['lastName'].errors?.['required']" class="invalid-feedback">
+          ! Last Name is required!
+        </div>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label for="emailInput" class="form-label">Email</label>
+        <input type="email" id="emailInput" formControlName="email" class="form-control" required />
+        <div *ngIf="submitted && formControl['email'].errors?.['required']" class="invalid-feedback">
+          ! Email is required!
+        </div>
+        <div *ngIf="submitted && formControl['email'].errors?.['email']" class="invalid-feedback">
+          ! Invalid email format!
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="mobileInput" class="form-label">Mobile</label>
+        <input type="text" id="mobileInput" formControlName="mobile" class="form-control" required />
+        <div *ngIf="submitted && formControl['mobile'].errors?.['required']" class="invalid-feedback">
+          ! Mobile is required!
+        </div>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label for="dobInput" class="form-label">Date of Birth</label>
+        <input type="date" id="dobInput" formControlName="dob" class="form-control" required />
+        <div *ngIf="submitted && formControl['dob'].errors?.['required']" class="invalid-feedback">
+          ! Date of Birth is required!
+        </div>
+        <div *ngIf="submitted && formControl['dob'].errors?.['invalidDob']" class="invalid-feedback">
+          ! Date of Birth cannot be in the future!
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="roleInput" class="form-label">Role</label>
+        <input type="text" id="roleInput" formControlName="role" class="form-control" required />
+        <div *ngIf="submitted && formControl['role'].errors?.['required']" class="invalid-feedback">
+          ! Role is required!
+        </div>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label for="passwordInput" class="form-label">Password</label>
+        <input  id="passwordInput" formControlName="password" class="form-control" required />
+        <div *ngIf="submitted && formControl['password'].errors?.['required']" class="invalid-feedback">
+          ! Password is required!
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="confirmPassword" class="form-label">Confirm Password</label>
+        <input  id="confirmPassword" formControlName="confirmPassword" class="form-control" required />
+        <div *ngIf="submitted && formControl['confirmPassword'].errors?.['required']" class="invalid-feedback">
+          ! Confirm Password is required!
+        </div>
+        <div *ngIf="submitted && myForm.errors?.['mismatch']" class="invalid-feedback">
+          ! Password and Confirm Password do not match!
+        </div>
+      </div>
+    </div>
+
+    <div formGroupName="address">
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label for="houseNoInput" class="form-label">House Number</label>
+          <input type="text" id="houseNoInput" formControlName="houseNo" class="form-control" required />
+          <div *ngIf="submitted && getAddressFormControl('houseNo').errors?.['required']" class="invalid-feedback">
+            ! House Number is required!
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label for="streetInput" class="form-label">Street</label>
+          <input type="text" id="streetInput" formControlName="street" class="form-control" required />
+          <div *ngIf="submitted && getAddressFormControl('street').errors?.['required']" class="invalid-feedback">
+            ! Street is required!
+          </div>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label for="areaInput" class="form-label">Area</label>
+          <input type="text" id="areaInput" formControlName="area" class="form-control" required />
+          <div *ngIf="submitted && getAddressFormControl('area').errors?.['required']" class="invalid-feedback">
+            ! Area is required!
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label for="stateInput" class="form-label">State</label>
+          <input type="text" id="stateInput" formControlName="state" class="form-control" required />
+          <div *ngIf="submitted && getAddressFormControl('state').errors?.['required']" class="invalid-feedback">
+            ! State is required!
+          </div>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label for="countryInput" class="form-label">Country</label>
+          <input type="text" id="countryInput" formControlName="country" class="form-control" required />
+          <div *ngIf="submitted && getAddressFormControl('country').errors?.['required']" class="invalid-feedback">
+            ! Country is required!
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label for="pincodeInput" class="form-label">Pincode</label>
+          <input type="text" id="pincodeInput" formControlName="pincode" class="form-control" required />
+          <div *ngIf="submitted && getAddressFormControl('pincode').errors?.['required']" class="invalid-feedback">
+            ! Pincode is required!
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+

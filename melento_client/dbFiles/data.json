@@ -1,0 +1,691 @@
+{
+  "users": [
+    {
+      "_id": "1",
+      "fName": "John",
+      "lName": "Doe",
+      "email": "john.doe@example.com",
+      "mobile": 1234567890,
+      "dob": "1990-01-01",
+      "role": "admin",
+      "password": "pass123",
+      "address": {
+        "houseNo": "",
+        "street": "",
+        "area": "",
+        "state": "",
+        "country": "",
+        "pincode": ""
+      }
+    },
+    {
+      "_id": "2",
+      "fName": "Jack",
+      "lName": "Smith",
+      "email": "jack.smith@example.com",
+      "mobile": 9876543210,
+      "dob": "1985-05-15",
+      "role": "admin",
+      "password": "admin123",
+      "address": {
+        "street": "18th Cross",
+        "city": "Springfield",
+        "state": "Illinois",
+        "zipCode": "62704",
+        "country": "USA"
+      }
+    },
+    {
+      "_id": "3",
+      "fName": "Peter",
+      "lName": "Parker",
+      "email": "peter.parker@example.com",
+      "mobile": 1231231234,
+      "dob": "2000-08-10",
+      "role": "trainee",
+      "password": "sp_idey123",
+      "address": {
+        "houseNo": "20",
+        "street": "Queens Blvd",
+        "area": "Queens",
+        "state": "New York",
+        "country": "USA",
+        "pincode": "11375"
+      }
+    },
+    {
+      "_id": "4",
+      "fName": "Jai",
+      "lName": "Goyal",
+      "email": "jai.goyal@example.com",
+      "mobile": 5555555555,
+      "dob": "1992-12-12",
+      "role": "trainee",
+      "password": "trainee123",
+      "address": {
+        "houseNo": "30",
+        "street": "MG Road",
+        "area": "Sector 15",
+        "state": "Haryana",
+        "country": "India",
+        "pincode": "122001"
+      }
+    },
+    {
+      "_id": "5",
+      "fName": "Rick",
+      "lName": "Sanchez",
+      "email": "rick.sanchez@example.com",
+      "mobile": 9090909090,
+      "dob": "1950-12-02",
+      "role": "faculty",
+      "password": "wubalubadubdub",
+      "address": {
+        "houseNo": "42",
+        "street": "Baker Street",
+        "area": "Marylebone",
+        "state": "London",
+        "country": "UK",
+        "pincode": "NW1 6XE"
+      }
+    },
+    {
+      "_id": "6",
+      "fName": "Samay",
+      "lName": "Raina",
+      "email": "samay.raina@example.com",
+      "mobile": 7777777777,
+      "dob": "1995-11-11",
+      "role": "trainee",
+      "password": "checkmate123",
+      "address": {
+        "houseNo": "12",
+        "street": "High Street",
+        "area": "Central",
+        "state": "Karnataka",
+        "country": "India",
+        "pincode": "560001"
+      }
+    },
+    {
+      "_id": "7",
+      "fName": "Miti",
+      "lName": "abc",
+      "email": "abc@gmail",
+      "mobile": "123",
+      "dob": "2024-06-27",
+      "role": "trainee",
+      "password": "123",
+      "address": {
+        "houseNo": "H",
+        "street": "St",
+        "area": "a",
+        "state": "st",
+        "country": "c",
+        "pincode": "123"
+      }
+    },
+    {
+      "_id": "8",
+      "fName": "Miti",
+      "lName": "abc",
+      "email": "abc@gmail",
+      "mobile": "123",
+      "dob": "2024-06-20",
+      "role": "faculty",
+      "password": "123",
+      "address": {
+        "houseNo": "",
+        "street": "",
+        "area": "",
+        "state": "",
+        "country": "",
+        "pincode": ""
+      }
+    },
+    {
+      "_id": "9",
+      "fName": "",
+      "lName": "",
+      "email": "john.doe@example.com",
+      "mobile": "",
+      "dob": "",
+      "role": "",
+      "password": "pass123",
+      "address": {
+        "houseNo": "",
+        "street": "",
+        "area": "",
+        "state": "",
+        "country": "",
+        "pincode": ""
+      }
+    },
+    {
+      "_id": "11",
+      "fName": "Teacher",
+      "lName": "1",
+      "email": "teacher@gmail.com",
+      "mobile": "100",
+      "dob": "2024-06-30",
+      "role": "faculty",
+      "password": "100",
+      "address": {
+        "houseNo": "H",
+        "street": "St",
+        "area": "Ar",
+        "state": "St",
+        "country": "Co",
+        "pincode": "1010"
+      }
+    },
+    {
+      "_id": "12",
+      "fName": "Ritik",
+      "lName": "Chahal",
+      "email": "ritik@gmail.com",
+      "mobile": "1001001",
+      "dob": "2024-07-01",
+      "role": "trainee",
+      "password": "1001",
+      "address": {
+        "houseNo": "H",
+        "street": "St",
+        "area": "Ar",
+        "state": "St",
+        "country": "Co",
+        "pincode": "10010"
+      }
+    }
+  ],
+  "courses": [
+    {
+      "_id": "1",
+      "cName": "Intrduction to Programming",
+      "category_id": "102",
+      "cDescription": "Learn the basics of programming using Python and C++."
+    },
+    {
+      "_id": "102",
+      "cName": "Mastering Angular",
+      "category_id": "103",
+      "cDescription": "A comprehensive Angular course."
+    },
+    {
+      "_id": "103",
+      "cName": "HTML Web Development",
+      "category_id": "104",
+      "cDescription": "A detailed course on HTML development from basic to advanced."
+    },
+    {
+      "_id": "",
+      "category_id": "",
+      "cName": "",
+      "cDescription": ""
+    },
+    {
+      "_id": "",
+      "category_id": "",
+      "cName": "",
+      "cDescription": ""
+    },
+    {
+      "_id": "",
+      "category_id": "",
+      "cName": "",
+      "cDescription": ""
+    }
+  ],
+  "course-categories": [
+    {
+      "_id": "1",
+      "category": "Software Development"
+    },
+    {
+      "_id": "2",
+      "category": "Economics"
+    }
+  ],
+  "assessment": [
+    {
+      "_id": "1",
+      "aName": "Programming Basics Assessment",
+      "aDes": "Assessment for introductory programming course.",
+      "aImgSrc": "assets/images/angular.png",
+      "aPrice": 100,
+      "marks": 85,
+      "time": "30000",
+      "course__id": "1",
+      "faculty__id": "1",
+      "isActive": true,
+      "itinery": [
+        {
+          "_id": 1,
+          "text": "Is Python a programming language?",
+          "type": "true-false",
+          "choices": ["true", "false"],
+          "correctAnswer": "true"
+        }
+      ]
+    },
+    {
+      "_id": "2",
+      "aName": "Advanced Angular Assessment",
+      "aDes": "Assessment for advanced Angular course.",
+      "aImgSrc": "assets/images/angular.png",
+      "aPrice": 49.99,
+      "marks": 90,
+      "time": 60,
+      "course__id": "102",
+      "faculty__id": "2",
+      "isActive": true,
+      "itinery": [
+        {
+          "_id": 3,
+          "category": "History",
+          "question": "Who was the first Pres_ident of the USA?",
+          "options": ["Washington", "Lincoln", "Jefferson", "Adams"],
+          "correctAns": "Washington"
+        },
+        {
+          "_id": 4,
+          "category": "Geography",
+          "question": "What is the capital of France?",
+          "options": ["Berlin", "Madr_id", "Paris", "Rome"],
+          "correctAns": "Paris"
+        }
+      ]
+    },
+    {
+      "_id": "3",
+      "aName": "HTML Development Assessment",
+      "aDes": "Assessment for HTML development course.",
+      "aImgSrc": "assets/images/angular.png",
+      "aPrice": 19.99,
+      "marks": 75,
+      "time": 60,
+      "course__id": "103",
+      "faculty__id": "5",
+      "isActive": true,
+      "itinery": [
+        {
+          "_id": 5,
+          "category": "Literature",
+          "question": "Who wrote 'Hamlet'?",
+          "options": ["Shakespeare", "Hemingway", "Dickens", "Austen"],
+          "correctAns": "Shakespeare"
+        },
+        {
+          "_id": 6,
+          "category": "Math",
+          "question": "What is the square root of 16?",
+          "options": ["2", "3", "4", "5"],
+          "correctAns": "4"
+        }
+      ]
+    },
+    {
+      "_id": "4",
+      "aName": "JavaScript Fundamentals",
+      "aDes": "Assessment for JavaScript fundamentals course.",
+      "aImgSrc": "assets/images/angular.png",
+      "aPrice": 39.99,
+      "marks": 80,
+      "time": 60,
+      "course__id": "104",
+      "faculty__id": "4",
+      "isActive": true,
+      "itinery": [
+        {
+          "_id": 7,
+          "category": "Science",
+          "question": "What is the chemical symbol for gold?",
+          "options": ["Au", "Ag", "Pt", "Pb"],
+          "correctAns": "Au"
+        },
+        {
+          "_id": 8,
+          "category": "History",
+          "question": "What year d_id the Titanic sink?",
+          "options": ["1910", "1912", "1914", "1916"],
+          "correctAns": "1912"
+        }
+      ]
+    },
+    {
+      "_id": "5",
+      "aName": "Web Development",
+      "aDes": "Assessment for web development with React course.",
+      "aImgSrc": "assets/images/angular.png",
+      "aPrice": 59.99,
+      "marks": 95,
+      "time": 60,
+      "course__id": "105",
+      "faculty__id": "5",
+      "isActive": true,
+      "itinery": [
+        {
+          "_id": 9,
+          "category": "Geography",
+          "question": "Which is the largest ocean on Earth?",
+          "options": ["Atlantic", "Indian", "Arctic", "Pacific"],
+          "correctAns": "Pacific"
+        },
+        {
+          "_id": 10,
+          "category": "Literature",
+          "question": "Who wrote 'Pr_ide and Prejudice'?",
+          "options": ["Austen", "Bronte", "Eliot", "Woolf"],
+          "correctAns": "Austen"
+        }
+      ]
+    },
+    {
+      "_id": "6",
+      "aName": "Node.js Mastery Assessment",
+      "aDes": "Assessment for Node.js mastery course.",
+      "aImgSrc": "assets/images/angular.png",
+      "aPrice": 100,
+      "marks": 88,
+      "time": 60,
+      "course__id": "106",
+      "faculty__id": "6",
+      "isActive": true,
+      "itinery": [
+        {
+          "_id": 1,
+          "text": "2+2",
+          "type": "multiple-choice",
+          "choices": ["1", "2", "3", "4"],
+          "correctAnswer": "4"
+        },
+        {
+          "_id": 2,
+          "text": "3*3 = 9?",
+          "type": "true-false",
+          "choices": ["true", "false"],
+          "correctAnswer": "true"
+        }
+      ]
+    },
+    {
+      "_id": "7",
+      "itinery": [
+        {
+          "_id": "1",
+          "category": "mcq",
+          "question": "1+1",
+          "options": {
+            "optionA": "2",
+            "optionB": "3",
+            "optionC": "4",
+            "optionD": "5"
+          },
+          "correctAns": "4"
+        },
+        {
+          "_id": "2",
+          "category": "truefalse",
+          "question": "3+3 = 4",
+          "options": {
+            "optionTrue": "True",
+            "optionFalse": "False"
+          },
+          "correctAns": ""
+        }
+      ],
+      "aName": "Vue.Js",
+      "aDes": "New assessment on Vue.Js",
+      "aImgSrc": "..",
+      "aPrice": "1000",
+      "marks": "10",
+      "time": "10",
+      "course__id": "101",
+      "faculty__id": "11",
+      "isActive": false
+    },
+    {
+      "_id": "8",
+      "itinery": [
+        {
+          "_id": "1",
+          "category": "truefalse",
+          "question": "ADA",
+          "options": {
+            "optionTrue": "True",
+            "optionFalse": "False"
+          },
+          "correctAns": ""
+        }
+      ],
+      "aName": "aaa",
+      "aDes": "adad",
+      "aImgSrc": "dd",
+      "aPrice": "111",
+      "marks": "11",
+      "time": "11",
+      "course__id": "adad",
+      "faculty__id": "adad",
+      "isActive": true
+    }
+  ],
+  "purchases": [
+    {
+      "_id": "1",
+      "user_id": "6",
+      "items": [
+        {
+          "assessment_id": "2",
+          "quantity": 2
+        },
+        {
+          "assessment_id": "3",
+          "quantity": 1
+        },
+        {
+          "assessment_id": "1",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "_id": "2",
+      "user_id": "7",
+      "items": [
+        {
+          "assessment_id": "2",
+          "quantity": 2
+        },
+        {
+          "assessment_id": "3",
+          "quantity": 4
+        },
+        {
+          "assessment_id": "5",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "_id": "3",
+      "user_id": "1",
+      "items": [
+        {
+          "assessment_id": "2",
+          "quantity": 5
+        },
+        {
+          "assessment_id": "3",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "_id": "4",
+      "user_id": "5",
+      "items": [
+        {
+          "assessment_id": "2",
+          "quantity": 2
+        }
+      ]
+    }
+  ],
+  "category": [
+    {
+      "_id": "102",
+      "catDescription": "102 description"
+    },
+    {
+      "_id": "103",
+      "catDescription": ""
+    },
+    {
+      "_id": "104",
+      "catDescription": ""
+    },
+    {
+      "_id": "105",
+      "catDescription": ""
+    },
+    {
+      "_id": "106",
+      "catDescription": "Course Category Description 106"
+    },
+    {
+      "_id": "",
+      "catDescription": ""
+    }
+  ],
+  "assessment-score": [
+    {
+      "_id": "1",
+      "assessment_id": "7",
+      "user_id": "1",
+      "score": 92,
+      "totalMarks": 92,
+      "assessmentName": "Product Seven",
+      "marksArray": [46, 46]
+    },
+    {
+      "_id": "2",
+      "assessment_id": "2",
+      "user_id": "7",
+      "score": 45,
+      "totalMarks": 90,
+      "assessmentName": "Advanced Angular Assessment",
+      "marksArray": [0, 45]
+    },
+    {
+      "_id": "3",
+      "assessment_id": "3",
+      "user_id": "7",
+      "score": 37,
+      "totalMarks": 75,
+      "assessmentName": "HTML Development Assessment",
+      "marksArray": [0, 37]
+    },
+    {
+      "_id": "4",
+      "assessment_id": "2",
+      "user_id": "7",
+      "score": 45,
+      "totalMarks": 90,
+      "assessmentName": "Advanced Angular Assessment",
+      "marksArray": [0, 45]
+    },
+    {
+      "_id": "5",
+      "assessment_id": "2",
+      "user_id": "1",
+      "score": 0,
+      "totalMarks": 90,
+      "assessmentName": "Advanced Angular Assessment",
+      "marksArray": [0, 0]
+    },
+    {
+      "_id": "6",
+      "assessment_id": "2",
+      "user_id": "1",
+      "score": 45,
+      "totalMarks": 90,
+      "assessmentName": "Advanced Angular Assessment",
+      "marksArray": [0, 45]
+    },
+    {
+      "_id": "7",
+      "assessment_id": "2",
+      "user_id": "5",
+      "score": 0,
+      "totalMarks": 90,
+      "assessmentName": "Advanced Angular Assessment",
+      "marksArray": [0, 0]
+    }
+  ],
+  "transformedassessment": [],
+  "attendances": [
+    {
+      "_id": "1",
+      "assessmentName": "Product Seven",
+      "date": "2024-06-28T02:03:44.331Z",
+      "assessment_id": "7",
+      "user_id": "1",
+      "attempt_id": "2-1",
+      "status": "Attempted"
+    },
+    {
+      "_id": "2",
+      "assessmentName": "Advanced Angular Assessment",
+      "date": "2024-06-28T07:53:15.530Z",
+      "assessment_id": "2",
+      "user_id": "7",
+      "attempt_id": "2-1",
+      "status": "Attempted"
+    },
+    {
+      "_id": "3",
+      "assessmentName": "HTML Development Assessment",
+      "date": "2024-06-28T07:54:30.953Z",
+      "assessment_id": "3",
+      "user_id": "7",
+      "attempt_id": "2-1",
+      "status": "Attempted"
+    },
+    {
+      "_id": "4",
+      "assessmentName": "Advanced Angular Assessment",
+      "date": "2024-06-28T08:10:54.164Z",
+      "assessment_id": "2",
+      "user_id": "7",
+      "attempt_id": "2-1",
+      "status": "Attempted"
+    },
+    {
+      "_id": "5",
+      "assessmentName": "Advanced Angular Assessment",
+      "date": "2024-06-28T08:27:29.539Z",
+      "assessment_id": "2",
+      "user_id": "1",
+      "attempt_id": "2-1",
+      "status": "Attempted"
+    },
+    {
+      "_id": "6",
+      "assessmentName": "Advanced Angular Assessment",
+      "date": "2024-06-30T12:27:46.826Z",
+      "assessment_id": "2",
+      "user_id": "1",
+      "attempt_id": "2-1",
+      "status": "Attempted"
+    },
+    {
+      "_id": "7",
+      "assessmentName": "Advanced Angular Assessment",
+      "date": "2024-07-03T18:44:11.371Z",
+      "assessment_id": "2",
+      "user_id": "5",
+      "attempt_id": "2-1",
+      "status": "Attempted"
+    }
+  ]
+}

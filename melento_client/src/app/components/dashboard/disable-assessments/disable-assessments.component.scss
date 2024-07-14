@@ -1,0 +1,90 @@
+main {
+  font-size: 0.875rem;
+}
+.sidebar-header {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-header svg {
+  margin-right: 8px;
+}
+
+.sidebar-header h4 {
+  margin: 0;
+}
+
+.col-md-3 {
+  padding-left: 0 !important;
+}
+.sidebar-sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  height: calc(100vh - 48px);
+  padding-top: 0.5rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.sidebar .nav-link {
+  font-weight: 500;
+  color: #333;
+}
+
+.sidebar .nav-link .feather {
+  margin-right: 4px;
+  color: #727272;
+}
+
+.sidebar .nav-link.active {
+  color: #007bff;
+}
+
+.sidebar .nav-link:hover .feather,
+.sidebar .nav-link.active .feather {
+  color: inherit;
+}
+
+.card {
+  border-radius: 0px;
+}
+
+/* Set overall padding and margins */
+.container-fluid {
+  padding-bottom: 20px;
+}
+
+/* Main content area */
+.col-md-9 {
+  padding: 20px;
+}
+
+/* Style for the header */
+.h2 {
+  margin-bottom: 20px;
+}
+
+.card-header {
+  font-size: medium;
+  background-color: #44474e;
+  color: white;
+  padding: 10px;
+  border-radius: 0px;
+}
+
+.card-body {
+  padding: 15px;
+  border-radius: 0px;
+}
+
+.btn-primary {
+  width: 60%;
+  border-radius: 0px;
+  font-size: small;
+}
+
+/* Button styles */
+.btn-block {
+  width: 100%;
+}

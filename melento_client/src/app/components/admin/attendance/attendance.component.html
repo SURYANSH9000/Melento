@@ -1,0 +1,56 @@
+<div class="container mt-4">
+  <h4>List of Attendance</h4>
+  <div class="table-responsive">
+    <table class="table table-striped cart-table">
+      <thead>
+        <tr>
+          <th scope="col">AttendanceD</th>
+          <th scope="col">Assessment Name</th>
+          <th scope="col">User Id</th>
+          <th scope="col">Date of Attempt</th>
+          <th scope="col">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let attendance of filteredAssessments">
+          <td>{{ attendance.id }}</td>
+          <td>{{ attendance.assessmentName }}</td>
+          <td>{{ attendance.userId }}</td>
+          <td>{{ attendance.date.split("T")[0] }}</td>
+          <td>
+            <p
+              class="font-weight-bold"
+              style="
+                font-size: 1.05rem;
+                padding: 2px 5px;
+                border-radius: 4px;
+                background-color: #f8f9fa;
+                margin: 0;
+                display: inline-block;
+              "
+            >
+              {{ attendance.status }}
+            </p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+      <li class="page-item" [class.disabled]="currentPage === 1">
+        <a class="page-link" (click)="changePage(currentPage - 1)">Previous</a>
+      </li>
+      <li
+        class="page-item"
+        *ngFor="let page of [].constructor(totalPages); let i = index"
+        [class.active]="i + 1 === currentPage"
+      >
+        <a class="page-link" (click)="changePage(i + 1)">{{ i + 1 }}</a>
+      </li>
+      <li class="page-item" [class.disabled]="currentPage === totalPages">
+        <a class="page-link" (click)="changePage(currentPage + 1)">Next</a>
+      </li>
+    </ul>
+  </nav>
+</div>

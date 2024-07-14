@@ -1,0 +1,69 @@
+<main>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar -->
+      <div class="col-md-3">
+        <app-dashboard-sidebar></app-dashboard-sidebar>
+      </div>
+
+      <!-- Main Content -->
+      <main
+        *ngIf="arrAttendanceScore.length == 0"
+        class="empty-dashboard col-md-9 ml-sm-auto col-lg-9 px-md-4"
+        style="padding-top: 0px !important"
+      >
+        <h2>Purchase Assessment To Start Learning!</h2>
+        <img
+          src="assets/images/empty-dashboard.gif"
+          alt="Empty Dashboard"
+          class="empty-dashboard-image"
+        />
+      </main>
+      <main
+        role="main"
+        class="col-md-9 ml-sm-auto col-lg-9 px-md-4"
+        *ngIf="arrAttendanceScore.length != 0"
+      >
+        <div
+          class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
+        >
+          <h2 class="h2">Your Attendence</h2>
+        </div>
+
+        <!-- Content Cards -->
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Assessment Name</th>
+                <th>Date</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let attendance of arrAttendanceScore">
+                <td>{{ attendance.assessmentName }}</td>
+                <td>{{ attendance.date.split("T")[0] }}</td>
+                <td>
+                  <p
+                    class="font-weight-bold"
+                    style="
+                      font-size: 1.05rem;
+                      padding: 2px 5px;
+                      border-radius: 4px;
+                      background-color: #f8f9fa;
+                      margin: 0;
+                      display: inline-block;
+                    "
+                  >
+                    {{ attendance.status }}
+                  </p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
+    </div>
+  </div>
+</main>

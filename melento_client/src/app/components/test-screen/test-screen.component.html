@@ -1,0 +1,194 @@
+<main>
+  <div class="container-fluid" style="padding: 0px">
+    <div class="row">
+      <!-- Sidebar -->
+      <div class="col-md-3">
+        <app-dashboard-sidebar></app-dashboard-sidebar>
+      </div>
+      <!-- Main Content -->
+      <main
+        role="main"
+        class="col-md-9 ml-sm-auto col-lg-9 px-md-4"
+        *ngIf="arrAssessment.length != 0"
+      >
+        <div class="col-md-12">
+          <div class="card mb-4 shadow-sm" style="border-radius: 0px">
+            <div
+              class="card-header"
+              style="
+                background-color: #44474e;
+                border-radius: 0px;
+                color: white;
+              "
+            >
+              <h4 class="my-0 font-weight-normal">Recent Assessments</h4>
+            </div>
+            <div class="card-body">
+              <div *ngIf="!selectedAssessment">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Assessment Name</th>
+                      <th>Marks</th>
+                      <th>Time</th>
+                      <th>Attempt Left</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let assessment of arrAssessment">
+                      <td>{{ assessment.aName }}</td>
+                      <td>{{ assessment.marks }}</td>
+                      <td>{{ assessment.time }} Minutes</td>
+                      <td>{{ getAssessmentQuantity(assessment.id) }}</td>
+                      <td>
+                        <button
+                          type="button"
+                          class="btn btn-primary"
+                          (click)="attemptAssessment(assessment.id)"
+                          [disabled]="
+                            getAssessmentQuantity(assessment.id) === 0
+                          "
+                        >
+                          Attempt
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div
+                *ngIf="selectedAssessment"
+                [class.full-screen]="isFullScreen"
+              >
+                <h2>{{ selectedAssessment.aName }}</h2>
+                <p>{{ selectedAssessment.aDes }}</p>
+                <p>Maximum Marks: {{ selectedAssessment.marks }}</p>
+                <p>Total Time: {{ selectedAssessment.time }} Minutes</p>
+
+                <mat-horizontal-stepper linear>
+                  <p>hello</p>
+                  <!-- Description Stepper -->
+                  <mat-step>
+                    <h6>Instructions</h6>
+                    <p>
+                      Please read the instructions carefully before proceeding.
+                    </p>
+                    <ul>
+                      <li>Ensure you have a stable internet connection.</li>
+                      <li>All the questions are compulsory.</li>
+                      <li>
+                        Attempt all the questions to the best of your ability.
+                      </li>
+                      <li>
+                        You can navigate back and forth between the questions.
+                      </li>
+                      <li>
+                        Click the submit button once you are done with all the
+                        questions.
+                      </li>
+                      <li>
+                        Once the time is completed the form will automatically
+                        get submitted.
+                      </li>
+                    </ul>
+                    <div>
+                      <button
+                        mat-button
+                        matStepperNext
+                        (click)="timer(selectedAssessment.time)"
+                      >
+                        Start Now
+                      </button>
+                    </div>
+                  </mat-step>
+
+                  <!-- Dynamic Steppers for Assessment Questions -->
+                  <ng-container
+                    *ngFor="
+                      let item of selectedAssessment.itinery;
+                      let i = index
+                    "
+                  >
+                    <mat-step [stepControl]="itemForm[i]">
+                      <form [formGroup]="itemForm[i]">
+                        <div class="container-fluid" id="timer">
+                          <div class="timer-container">
+                            <h5 class="timer-text" [style.color]="timerColor">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="20"
+                                height="20"
+                                fill="currentColor"
+                                class="bi bi-clock"
+                                viewBox="0 0 16 16"
+                              >
+                                <path
+                                  d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"
+                                />
+                                <path
+                                  d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0"
+                                />
+                              </svg>
+                              Time Left: {{ display }}
+                            </h5>
+                          </div>
+                        </div>
+
+                        <ng-template matStepLabel>{{
+                          item.category
+                        }}</ng-template>
+                        <p>{{ item.question }}</p>
+                        <mat-radio-group formControlName="selectedOption">
+                          <mat-radio-button
+                            *ngFor="let option of item.options"
+                            [value]="option"
+                            >{{ option }}</mat-radio-button
+                          >
+                        </mat-radio-group>
+                        <div>
+                          <button mat-button matStepperPrevious *ngIf="i > 0">
+                            Back
+                          </button>
+                          <button
+                            mat-button
+                            matStepperNext
+                            *ngIf="i < selectedAssessment.itinery.length - 1"
+                          >
+                            Next
+                          </button>
+                          <br /><br />
+                          <button
+                            type="button"
+                            class="btn btn-success"
+                            (click)="submitAssessment()"
+                            *ngIf="i === selectedAssessment.itinery.length - 1"
+                          >
+                            Submit
+                          </button>
+                        </div>
+                      </form>
+                    </mat-step>
+                  </ng-container>
+                </mat-horizontal-stepper>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <main
+        *ngIf="arrAssessment.length == 0"
+        class="empty-dashboard col-md-9 ml-sm-auto col-lg-9 px-md-4"
+        style="padding-top: 0px !important"
+      >
+        <h2>Purchase Assessment To Start Learning!</h2>
+        <img
+          src="assets/images/empty-dashboard.gif"
+          alt="Empty Dashboard"
+          class="empty-dashboard-image"
+        />
+      </main>
+    </div>
+  </div>
+</main>

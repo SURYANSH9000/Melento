@@ -1,0 +1,129 @@
+#myTabContent {
+  padding-top: 20px;
+}
+.empty-cart {
+  text-align: center;
+  padding: 2rem;
+  border-radius: 0px;
+}
+
+.empty-cart-image {
+  width: 400px;
+  height: auto;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.315);
+}
+
+.empty-cart h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.empty-cart .btn {
+  padding: 0.5rem 1rem;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #004085;
+}
+
+/* Container styling */
+.container {
+  margin-top: 20px;
+}
+
+.cart-container {
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 100vh;
+}
+.table-responsive {
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 0px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.cart-table thead th {
+  background-color: #343a40;
+  color: #fff;
+}
+.cart-table {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  width: 75%;
+  vertical-align: middle;
+}
+
+.assessment-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 0px;
+  margin-right: 2rem;
+  object-fit: cover;
+}
+
+.assessment-name {
+  font-weight: bold;
+}
+
+.quantity-controls {
+  display: inline-flex;
+  align-items: center;
+}
+
+.quantity-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.quantity {
+  margin: 0 10px;
+}
+
+.cart-summary {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.apply-coupon {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+
+.coupon-input {
+  width: auto;
+}
+
+.checkout-btn {
+  display: block;
+  width: 15%;
+  border-radius: 0px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.171);
+  font-weight: bold;
+}
+
+.btn-outline-dark,
+.btn-dark,
+.btn-primary {
+  font-weight: bold;
+  border-radius: 0px;
+  margin-right: 1.2rem !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.171);
+}

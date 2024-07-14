@@ -1,0 +1,229 @@
+<div class="container">
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit(registerForm)">
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label for="firstNameInput" class="form-label">First Name</label>
+        <input
+          type="text"
+          id="firstNameInput"
+          formControlName="firstName"
+          class="form-control"
+          required
+        />
+        <div
+          *ngIf="
+            registerForm.get('firstName')?.touched &&
+            registerForm.get('firstName')?.invalid
+          "
+          class="invalid-feedback"
+        >
+          First Name is required!
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="lastNameInput" class="form-label">Last Name</label>
+        <input
+          type="text"
+          id="lastNameInput"
+          formControlName="lastName"
+          class="form-control"
+          required
+        />
+        <div
+          *ngIf="
+            registerForm.get('lastName')?.touched &&
+            registerForm.get('lastName')?.invalid
+          "
+          class="invalid-feedback"
+        >
+          Last Name is required!
+        </div>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label for="emailInput" class="form-label">Email</label>
+        <input
+          type="email"
+          id="emailInput"
+          formControlName="email"
+          class="form-control"
+          required
+        />
+        <div
+          *ngIf="
+            registerForm.get('email')?.touched &&
+            registerForm.get('email')?.invalid
+          "
+          class="invalid-feedback"
+        >
+          Email is required and must be a valid email!
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="mobileInput" class="form-label">Mobile</label>
+        <input
+          type="text"
+          id="mobileInput"
+          formControlName="mobile"
+          class="form-control"
+          required
+        />
+        <div
+          *ngIf="
+            registerForm.get('mobile')?.touched &&
+            registerForm.get('mobile')?.invalid
+          "
+          class="invalid-feedback"
+        >
+          Mobile is required!
+        </div>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label for="dobInput" class="form-label">Date of Birth</label>
+        <input
+          type="date"
+          id="dobInput"
+          formControlName="dob"
+          class="form-control"
+          required
+        />
+        <div
+          *ngIf="
+            registerForm.get('dob')?.touched && registerForm.get('dob')?.invalid
+          "
+          class="invalid-feedback"
+        >
+          Date of Birth is required and cannot be in the future!
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="roleInput" class="form-label">Role</label>
+        <input
+          type="text"
+          id="roleInput"
+          formControlName="role"
+          class="form-control"
+          required
+        />
+        <div
+          *ngIf="
+            registerForm.get('role')?.touched &&
+            registerForm.get('role')?.invalid
+          "
+          class="invalid-feedback"
+        >
+          Role is required!
+        </div>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label for="passwordInput" class="form-label">Password</label>
+        <input
+          type="password"
+          id="passwordInput"
+          formControlName="password"
+          class="form-control"
+          required
+        />
+        <div
+          *ngIf="
+            registerForm.get('password')?.touched &&
+            registerForm.get('password')?.invalid
+          "
+          class="invalid-feedback"
+        >
+          Password is required!
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="confirmPassword" class="form-label">Confirm Password</label>
+        <input
+          type="password"
+          id="confirmPassword"
+          formControlName="confirmPassword"
+          class="form-control"
+          [class.is-invalid]="(submitted && formControl['confirmPassword'].invalid) || (submitted && registerForm.errors?.['mismatch'])"
+          required
+        />
+        <div
+          *ngIf="submitted && (formControl['confirmPassword'].invalid || registerForm.errors?.['mismatch'])"
+          class="invalid-feedback"
+        >
+          Confirm Password is required and must match the Password!
+        </div>
+      </div>
+    </div>
+
+    <div formGroupName="address">
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label for="houseNoInput" class="form-label">House Number</label>
+          <input
+            type="text"
+            id="houseNoInput"
+            formControlName="houseNo"
+            class="form-control"
+          />
+        </div>
+        <div class="col-md-6">
+          <label for="streetInput" class="form-label">Street</label>
+          <input
+            type="text"
+            id="streetInput"
+            formControlName="street"
+            class="form-control"
+          />
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label for="areaInput" class="form-label">Area</label>
+          <input
+            type="text"
+            id="areaInput"
+            formControlName="area"
+            class="form-control"
+          />
+        </div>
+        <div class="col-md-6">
+          <label for="stateInput" class="form-label">State</label>
+          <input
+            type="text"
+            id="stateInput"
+            formControlName="state"
+            class="form-control"
+          />
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label for="countryInput" class="form-label">Country</label>
+          <input
+            type="text"
+            id="countryInput"
+            formControlName="country"
+            class="form-control"
+          />
+        </div>
+        <div class="col-md-6">
+          <label for="pincodeInput" class="form-label">Pincode</label>
+          <input
+            type="text"
+            id="pincodeInput"
+            formControlName="pincode"
+            class="form-control"
+          />
+        </div>
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

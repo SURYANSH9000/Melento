@@ -1,0 +1,45 @@
+[{
+  "_id": "1",
+  "cName": "Introduction to Programming",
+  "categoryId": "102",
+  "cDescription": "Learn the basics of programming using Python and C++."
+},
+{
+  "_id": "102",
+  "cName": "Mastering Angular",
+  "categoryId": "103",
+  "cDescription": "A comprehensive Angular course."
+},
+{
+  "_id": "103",
+  "cName": "HTML Web Development",
+  "categoryId": "104",
+  "cDescription": "A detailed course on HTML development from basic to advanced."
+},
+{
+  "_id": "",
+  "categoryId": "",
+  "cName": "",
+  "cDescription": ""
+},
+{
+  "_id": {
+    "$oid": "668a9612266560344d4f43e4"
+  },
+  "id": "45",
+  "categoryId": "Lifestyle",
+  "cName": "Enhance your life",
+  "cDescription": "This is great"
+},
+{
+  "_id": "41",
+  "categoryId": "56",
+  "cName": "HTML",
+  "cDescription": "New course"
+},
+{
+  "_id": "66",
+  "categoryId": "13",
+  "cName": "ABCD",
+  "cDescription": "This is a test course for testing"
+}]

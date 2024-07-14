@@ -1,0 +1,273 @@
+<button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
+  {{ !isLinear ? "Enable linear mode" : "Disable linear mode" }}
+</button>
+<mat-stepper [linear]="isLinear" #stepper>
+  <mat-step [stepControl]="firstFormGroup" label="Basic Assessment Details">
+    <form [formGroup]="firstFormGroup">
+      <mat-toolbar color="primary"> Add Assessment details </mat-toolbar>
+      <mat-form-field appearance="fill" style="padding-right: 20px">
+        <mat-label>Assessment Name</mat-label>
+        <input
+          matInput
+          placeholder="Assessment Name"
+          formControlName="aNameCtrl"
+          required
+        />
+        <mat-error
+          *ngIf="firstFormGroup.get('aNameCtrl')?.hasError('required')"
+        >
+          Assessment Name is required
+        </mat-error>
+        <mat-error
+          *ngIf="firstFormGroup.get('aNameCtrl')?.hasError('minlength')"
+        >
+          Assessment Name must be at least 3 characters long
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="fill" style="padding-right: 20px">
+        <mat-label>Total Marks</mat-label>
+        <input
+          matInput
+          placeholder="Total Marks"
+          formControlName="marksCtrl"
+          required
+        />
+        <mat-error
+          *ngIf="firstFormGroup.get('marksCtrl')?.hasError('required')"
+        >
+          Total Marks are required
+        </mat-error>
+        <mat-error *ngIf="firstFormGroup.get('marksCtrl')?.hasError('min')">
+          Total Marks must be a positive number
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="fill" style="padding-right: 20px">
+        <mat-label>Total Time (in minutes)</mat-label>
+        <input
+          matInput
+          placeholder="Total Time"
+          formControlName="timeCtrl"
+          required
+        />
+        <mat-error *ngIf="firstFormGroup.get('timeCtrl')?.hasError('required')">
+          Total Time is required
+        </mat-error>
+        <mat-error *ngIf="firstFormGroup.get('timeCtrl')?.hasError('min')">
+          Total Time must be a positive number
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="fill" style="padding-right: 20px">
+        <mat-label>Course Id</mat-label>
+        <input
+          matInput
+          placeholder="Course Id"
+          formControlName="cIdCtrl"
+          required
+        />
+        <mat-error *ngIf="firstFormGroup.get('cIdCtrl')?.hasError('required')">
+          Course Id is required
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="fill" style="padding-right: 20px">
+        <mat-label>Faculty Id</mat-label>
+        <input
+          matInput
+          placeholder="Faculty Id"
+          formControlName="facultyIdCtrl"
+          required
+        />
+        <mat-error
+          *ngIf="firstFormGroup.get('facultyIdCtrl')?.hasError('required')"
+        >
+          Faculty Id is required
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="fill" style="padding-right: 20px">
+        <mat-label>Assessment Description</mat-label>
+        <textarea
+          matInput
+          placeholder="Assessment Description"
+          formControlName="aDesCtrl"
+          required
+        ></textarea>
+        <mat-error *ngIf="firstFormGroup.get('aDesCtrl')?.hasError('required')">
+          Assessment Description is required
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="fill" style="padding-right: 20px">
+        <mat-label>Price</mat-label>
+        <input
+          matInput
+          placeholder="Price"
+          formControlName="priceCtrl"
+          required
+        />
+        <mat-error
+          *ngIf="firstFormGroup.get('priceCtrl')?.hasError('required')"
+        >
+          Price is required
+        </mat-error>
+        <mat-error *ngIf="firstFormGroup.get('priceCtrl')?.hasError('min')">
+          Price must be a non-negative number
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="fill" style="padding-right: 20px">
+        <mat-label>Image Source</mat-label>
+        <input
+          matInput
+          placeholder="Image Source"
+          formControlName="imgSrcCtrl"
+          required
+        />
+        <mat-error
+          *ngIf="firstFormGroup.get('imgSrcCtrl')?.hasError('required')"
+        >
+          Image Source is required
+        </mat-error>
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button (click)="saveFirstStepData()">Next</button>
+      </div>
+    </form>
+  </mat-step>
+
+  <mat-step [stepControl]="secondFormGroup" label="Itineraries">
+    <form [formGroup]="itineryForm">
+      <mat-toolbar color="primary">Add Itineraries</mat-toolbar>
+      <div formArrayName="itineries">
+        <div
+          *ngFor="let question of itineriesArr().controls; let i = index"
+          [formGroupName]="i"
+          class="itinery-container"
+        >
+          <div class="row">
+            <div class="col-md-6">
+              <mat-form-field appearance="fill">
+                <mat-label>Category</mat-label>
+                <mat-select formControlName="category" required>
+                  <mat-option value="mcq">Multiple Choice Questions</mat-option>
+                  <mat-option value="truefalse">True/False</mat-option>
+                </mat-select>
+                <mat-error
+                  *ngIf="question.get('category')?.hasError('required')"
+                >
+                  Category is required
+                </mat-error>
+              </mat-form-field>
+            </div>
+            <div class="col-md-6">
+              <mat-form-field appearance="fill">
+                <mat-label>Question</mat-label>
+                <textarea
+                  matInput
+                  formControlName="question"
+                  required
+                ></textarea>
+                <mat-error
+                  *ngIf="question.get('question')?.hasError('required')"
+                >
+                  Question is required
+                </mat-error>
+                <mat-error
+                  *ngIf="question.get('question')?.hasError('minlength')"
+                >
+                  Question must be at least 5 characters long
+                </mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          <div *ngIf="question.get('category')?.value === 'mcq'" class="row">
+            <div class="col-md-3">
+              <mat-form-field appearance="fill">
+                <mat-label>Option A</mat-label>
+                <input matInput formControlName="optionA" />
+              </mat-form-field>
+            </div>
+            <div class="col-md-3">
+              <mat-form-field appearance="fill">
+                <mat-label>Option B</mat-label>
+                <input matInput formControlName="optionB" />
+              </mat-form-field>
+            </div>
+            <div class="col-md-3">
+              <mat-form-field appearance="fill">
+                <mat-label>Option C</mat-label>
+                <input matInput formControlName="optionC" />
+              </mat-form-field>
+            </div>
+            <div class="col-md-3">
+              <mat-form-field appearance="fill">
+                <mat-label>Option D</mat-label>
+                <input matInput formControlName="optionD" />
+              </mat-form-field>
+            </div>
+          </div>
+          <div
+            *ngIf="question.get('category')?.value === 'truefalse'"
+            class="row"
+          >
+            <div class="col-md-6">
+              <mat-form-field appearance="fill">
+                <mat-label>Option True</mat-label>
+                <input matInput formControlName="optionTrue" value="True" />
+              </mat-form-field>
+            </div>
+            <div class="col-md-6">
+              <mat-form-field appearance="fill">
+                <mat-label>Option False</mat-label>
+                <input matInput formControlName="optionFalse" value="False" />
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <mat-form-field appearance="fill">
+                <mat-label>Correct Answer</mat-label>
+                <input matInput formControlName="correctAns" required />
+                <mat-error
+                  *ngIf="question.get('correctAns')?.hasError('required')"
+                >
+                  Correct Answer is required
+                </mat-error>
+              </mat-form-field>
+            </div>
+            <div class="col-md-6">
+              <button
+                mat-icon-button
+                color="warn"
+                aria-label="Remove"
+                (click)="removeOrClearItinery(i)"
+              >
+                <mat-icon>delete</mat-icon>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <button
+          mat-icon-button
+          color="primary"
+          aria-label="Add new"
+          (click)="addItineryFormGroup()"
+        >
+          <mat-icon>note_add</mat-icon>
+        </button>
+      </div>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button (click)="saveSecondStepData()">Save</button>
+      </div>
+    </form>
+  </mat-step>
+
+  <mat-step>
+    <ng-template matStepLabel>Done</ng-template>
+    You are now done.
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button>Submit</button>
+    </div>
+  </mat-step>
+</mat-stepper>

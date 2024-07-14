@@ -1,0 +1,531 @@
+[{
+  "_id": "1",
+  "fName": "John",
+  "lName": "Doe",
+  "email": "john.doe@example.com",
+  "mobile": 1234567890,
+  "dob": "1990-01-01",
+  "role": "admin",
+  "password": {
+    "iv": "bd4e5a690852d5f9ec0b2f835397be10",
+    "encryptedData": "284dde44cbd263fa826623e7c9d77dd2"
+  },
+  "address": {
+    "houseNo": "",
+    "street": "",
+    "area": "",
+    "state": "",
+    "country": "",
+    "pincode": ""
+  },
+  "likedAssessments": [
+    "5",
+    "3",
+    "2",
+    "18",
+    "19",
+    "22"
+  ]
+},
+{
+  "_id": "2",
+  "fName": "Jack",
+  "lName": "Martin",
+  "email": "jack.smith@example.com",
+  "mobile": {
+    "$numberLong": "9876543210"
+  },
+  "dob": "1985-05-15",
+  "role": "admin",
+  "password": "admin123",
+  "address": {
+    "houseNo": "H",
+    "street": "18th Cross",
+    "area": "ar",
+    "state": "Illinois",
+    "country": "USA",
+    "pincode": "112"
+  },
+  "likedAssessments": [
+    "2",
+    "6"
+  ]
+},
+{
+  "_id": "3",
+  "fName": "Peter",
+  "lName": "Parker",
+  "email": "peter.parker@example.com",
+  "mobile": 1231231234,
+  "dob": "2000-08-10",
+  "role": "trainee",
+  "password": "sp_idey123",
+  "address": {
+    "houseNo": "20",
+    "street": "Queens Blvd",
+    "area": "Queens",
+    "state": "New York",
+    "country": "USA",
+    "pincode": "11375"
+  }
+},
+{
+  "_id": "4",
+  "fName": "Jai",
+  "lName": "Goyal",
+  "email": "jai.goyal@example.com",
+  "mobile": {
+    "$numberLong": "5555555555"
+  },
+  "dob": "1992-12-12",
+  "role": "trainee",
+  "password": {
+    "iv": "917e72b56e66023c61392e92420bde14",
+    "encryptedData": "011b5bb1e2c0754cc956fcdbad79a036"
+  },
+  "address": {
+    "houseNo": "30",
+    "street": "MG Road",
+    "area": "Sector 15",
+    "state": "Haryana",
+    "country": "India",
+    "pincode": "122001"
+  },
+  "likedAssessments": [
+    "1"
+  ]
+},
+{
+  "_id": "5",
+  "fName": "Rick",
+  "lName": "Sanchez",
+  "email": "rick.sanchez@example.com",
+  "mobile": {
+    "$numberLong": "9090909090"
+  },
+  "dob": "1950-12-02",
+  "role": "faculty",
+  "address": {
+    "houseNo": "42",
+    "street": "Baker Street",
+    "area": "Marylebone",
+    "state": "London",
+    "country": "UK",
+    "pincode": "NW1 6XE"
+  },
+  "likedAssessments": [
+    "1",
+    "6",
+    "7"
+  ],
+  "password": "rick"
+},
+{
+  "_id": "6",
+  "fName": "Samay",
+  "lName": "Chess",
+  "email": "samay.raina@example.com",
+  "mobile": {
+    "$numberLong": "7777777777"
+  },
+  "dob": "1995-11-11",
+  "role": "trainee",
+  "password": {
+    "iv": "3584cb2aae9518c61720290eaa41c193",
+    "encryptedData": "a324567e4f0e6018502de40bb9b6e51b"
+  },
+  "address": {
+    "houseNo": "12",
+    "street": "High Street",
+    "area": "Central",
+    "state": "Karnataka",
+    "country": "India",
+    "pincode": "560001"
+  },
+  "likedAssessments": [
+    "2",
+    "1",
+    "3",
+    "5"
+  ]
+},
+{
+  "_id": "7",
+  "fName": "Miti",
+  "lName": "abc",
+  "email": "abc@gmail",
+  "mobile": "123",
+  "dob": "2024-06-27",
+  "role": "trainee",
+  "password": "123",
+  "address": {
+    "houseNo": "H",
+    "street": "St",
+    "area": "a",
+    "state": "st",
+    "country": "c",
+    "pincode": "123"
+  }
+},
+{
+  "_id": "8",
+  "fName": "Miti",
+  "lName": "abc",
+  "email": "abc@gmail",
+  "mobile": "123",
+  "dob": "2024-06-20",
+  "role": "trainee",
+  "password": {
+    "iv": "c547d9e126b783e19d523472a3c4e0bd",
+    "encryptedData": "123157582f201ec9dd43cb185b7b6aed"
+  },
+  "address": {
+    "houseNo": "1",
+    "street": "1dad",
+    "area": "ada",
+    "state": "adasd",
+    "country": "dada",
+    "pincode": "538855"
+  },
+  "likedAssessments": []
+},
+{
+  "_id": "12",
+  "fName": "Ritik",
+  "lName": "Kumar",
+  "email": "ritik@gmail.com",
+  "mobile": "1001001",
+  "dob": "2024-07-01",
+  "role": "trainee",
+  "password": "1001",
+  "address": {
+    "houseNo": "H",
+    "street": "St",
+    "area": "Ar",
+    "state": "St",
+    "country": "Co",
+    "pincode": "10010"
+  }
+},
+{
+  "_id": "19",
+  "fName": "Ritik",
+  "lName": "Sharma",
+  "email": "ritiks@gmail.com",
+  "mobile": "1001001",
+  "dob": "2024-07-01",
+  "role": "trainee",
+  "password": "1001",
+  "address": {
+    "houseNo": "H",
+    "street": "St",
+    "area": "Ar",
+    "state": "St",
+    "country": "Co",
+    "pincode": "10010"
+  }
+},
+{
+  "_id": "20",
+  "fName": "Carry",
+  "lName": "Minati",
+  "email": "carry@gmail.com",
+  "mobile": "10010010",
+  "dob": "2024-07-02",
+  "role": "trainee",
+  "password": "pass123",
+  "address": {
+    "houseNo": "1001",
+    "street": "st",
+    "area": "ae",
+    "state": "as",
+    "country": "k",
+    "pincode": "10101"
+  }
+},
+{
+  "_id": "21",
+  "fName": "Hritik",
+  "lName": "Verma",
+  "email": "ritiks@gmail.com",
+  "mobile": "1001001",
+  "dob": "2024-07-01",
+  "role": "trainee",
+  "password": "1001",
+  "address": {
+    "houseNo": "H",
+    "street": "St",
+    "area": "Ar",
+    "state": "St",
+    "country": "Co",
+    "pincode": "10010"
+  }
+},
+{
+  "_id": "22",
+  "fName": "Suresh",
+  "lName": "Sharma",
+  "email": "s@gmail.com",
+  "mobile": "123456789",
+  "dob": "2024-07-06",
+  "role": "trainee",
+  "password": "pass123",
+  "address": {
+    "houseNo": "1",
+    "street": "dadad",
+    "area": "dadad",
+    "state": "dadad",
+    "country": "daada",
+    "pincode": "1245"
+  },
+  "id": "22"
+},
+{
+  "_id": "23",
+  "fName": "Yash",
+  "lName": "Gupta",
+  "email": "yash@gmail.com",
+  "mobile": "585263316",
+  "dob": "2024-07-10",
+  "role": "trainee",
+  "password": "pass123",
+  "address": {
+    "houseNo": "1",
+    "street": "12",
+    "area": "accsd",
+    "state": "Uttar Pradesh",
+    "country": "India",
+    "pincode": "250001"
+  }
+},
+{
+  "_id": "24",
+  "fName": "Yash",
+  "lName": "Sharma",
+  "email": "yash@gmail.com",
+  "mobile": "585263316",
+  "dob": "2024-07-10",
+  "role": "trainee",
+  "password": {
+    "iv": "025a462eff9ecc105e7a06c930a0d443",
+    "encryptedData": "470e5f8aaa665db033a46231615d872e"
+  },
+  "address": {
+    "houseNo": "1",
+    "street": "12",
+    "area": "accsd",
+    "state": "Uttar Pradesh",
+    "country": "India",
+    "pincode": "250001"
+  },
+  "likedAssessments": []
+},
+{
+  "_id": "26",
+  "fName": "abcd",
+  "lName": "abcd",
+  "email": "abcd@example.com",
+  "mobile": "556235698632",
+  "dob": "2024-07-10",
+  "role": "faculty",
+  "password": {
+    "iv": "026f483e99f7d9aedd04eea2fa831944",
+    "encryptedData": "f2cfd64da0e193ba9b10c3edd16d4432"
+  },
+  "address": {
+    "houseNo": "445",
+    "street": "adad",
+    "area": "abcd",
+    "state": "abcd",
+    "country": "abcd`",
+    "pincode": "5221254"
+  }
+},
+{
+  "_id": "27",
+  "fName": "eeee",
+  "lName": "eeee",
+  "email": "eeee@example.com",
+  "mobile": "08979063316",
+  "dob": "2024-07-04",
+  "password": {
+    "iv": "0316ee68555ba3da3fe085ea904d4183",
+    "encryptedData": "3f62e203fea0c1087a9618e38f400edb"
+  },
+  "role": "trainee",
+  "address": {
+    "houseNo": "1",
+    "street": "eeee",
+    "area": "eeee",
+    "state": "Uttar Pradesh",
+    "country": "India",
+    "pincode": "250001"
+  }
+},
+{
+  "_id": "28",
+  "fName": "kekkar",
+  "lName": "Infotech",
+  "email": "kekkar@example.com",
+  "mobile": "08979063316",
+  "dob": "2000-01-01",
+  "password": "kekkar",
+  "role": "trainee",
+  "address": {
+    "houseNo": "1",
+    "street": "kekkar",
+    "area": "kekkar",
+    "state": "Uttar Pradesh",
+    "country": "India",
+    "pincode": "250001"
+  }
+},
+{
+  "_id": "29",
+  "fName": "jjjj",
+  "lName": "Infotech",
+  "email": "jjjj@example.com",
+  "mobile": "08979063316",
+  "dob": "2000-01-01",
+  "password": "jjjj",
+  "role": "trainee",
+  "address": {
+    "houseNo": "1",
+    "street": "jjjj",
+    "area": "jjjj",
+    "state": "Uttar Pradesh",
+    "country": "India",
+    "pincode": "250001"
+  }
+},
+{
+  "_id": "30",
+  "fName": "Zellsis",
+  "lName": "Sen",
+  "email": "zellsis@example.com",
+  "mobile": "08979063316",
+  "dob": "2000-01-01",
+  "password": {
+    "iv": "8902f67cf10f83dae689f4afb0704dbb",
+    "encryptedData": "cf6fc6e6a193b7581852deaed4a87501"
+  },
+  "role": "trainee",
+  "address": {
+    "houseNo": "1",
+    "street": "Zellsis",
+    "area": "Zellsis",
+    "state": "Uttar Pradesh",
+    "country": "India",
+    "pincode": "250001"
+  },
+  "likedAssessments": [
+    "2"
+  ]
+},
+{
+  "_id": "31",
+  "fName": "Johnqt",
+  "lName": "Sen",
+  "email": "johnqt@example.com",
+  "mobile": "08979063316",
+  "dob": "2024-07-03",
+  "role": "trainee",
+  "password": {
+    "iv": "f64293019fd1da898ffbd4fc237e3976",
+    "encryptedData": "91a45400998b1d569b001b9533760de1"
+  },
+  "address": {
+    "houseNo": "1",
+    "street": "111",
+    "area": "dddd",
+    "state": "Uttar Pradesh",
+    "country": "India",
+    "pincode": "250001"
+  },
+  "likedAssessments": []
+},
+{
+  "_id": "32",
+  "fName": "miniboo",
+  "lName": "100T",
+  "email": "miniboo@example.com",
+  "mobile": "08979063316",
+  "dob": "2024-07-06",
+  "role": "faculty",
+  "password": {
+    "iv": "f88528e96f7f1f89d89e4c1e5f3ec119",
+    "encryptedData": "d22a762633238a891811327b52481299"
+  },
+  "address": {
+    "houseNo": "1",
+    "street": "miniboo",
+    "area": "miniboo",
+    "state": "Uttar Pradesh",
+    "country": "India",
+    "pincode": "250001"
+  },
+  "likedAssessments": []
+},
+{
+  "_id": "33",
+  "fName": "qwaa",
+  "lName": "qwaa",
+  "email": "qwaa@example.com",
+  "mobile": "08979063316",
+  "dob": "2000-01-01",
+  "password": "qwaa",
+  "role": "trainee",
+  "address": {
+    "houseNo": "1",
+    "street": "qwaa",
+    "area": "qwaa",
+    "state": "Uttar Pradesh",
+    "country": "India",
+    "pincode": "250001"
+  },
+  "likedAssessments": []
+},
+{
+  "_id": "34",
+  "fName": "qwaal",
+  "lName": "qwaa",
+  "email": "qwaal@example.com",
+  "mobile": "08979063316",
+  "dob": "2000-01-01",
+  "password": {
+    "iv": "9579c4a8a2da5e6cc69fbc5c217fc8b5",
+    "encryptedData": "ee2ba3c23bea584fcd3b4b07a23f643a"
+  },
+  "role": "faculty",
+  "address": {
+    "houseNo": "1",
+    "street": "qwaal",
+    "area": "qwaal",
+    "state": "Uttar Pradesh",
+    "country": "India",
+    "pincode": "250001"
+  },
+  "likedAssessments": []
+},
+{
+  "_id": "35",
+  "fName": "accc",
+  "lName": "accc",
+  "email": "accc@example.com",
+  "mobile": "08979063316",
+  "dob": "2000-01-01",
+  "password": {
+    "iv": "a545ee844c172d7ddb6bcddd413c97b8",
+    "encryptedData": "5065f7aa6c968243e19f809e23ac25d4"
+  },
+  "role": "trainee",
+  "address": {
+    "houseNo": "1111",
+    "street": "accc",
+    "area": "accc",
+    "state": "Uttar Pradesh",
+    "country": "India",
+    "pincode": "250001"
+  },
+  "likedAssessments": []
+}]

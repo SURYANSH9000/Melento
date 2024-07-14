@@ -1,0 +1,98 @@
+<main>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar -->
+      <div class="col-md-3">
+        <app-dashboard-sidebar></app-dashboard-sidebar>
+      </div>
+      <!-- Main Content -->
+      <main
+        *ngIf="arrAssessmentScore.length == 0"
+        class="empty-dashboard col-md-9 ml-sm-auto col-lg-9 px-md-4"
+        style="padding-top: 0px !important"
+      >
+        <h2>Purchase Assessment To Start Learning!</h2>
+        <img
+          src="assets/images/empty-dashboard.gif"
+          alt="Empty Dashboard"
+          class="empty-dashboard-image"
+        />
+      </main>
+      <main
+        role="main"
+        class="col-md-9 ml-sm-auto col-lg-9 px-md-4"
+        *ngIf="arrAssessmentScore.length != 0"
+      >
+        <div
+          class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
+        >
+          <h2>Your Performance</h2>
+        </div>
+
+        <!-- Content Cards -->
+        <div class="table-responsive">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Assessment Name</th>
+                <th scope="col">Total Marks</th>
+                <th scope="col">Marks Obtained</th>
+                <th scope="col">Result</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let assessment of arrAssessmentScore">
+                <td>{{ assessment.assessmentName }}</td>
+                <td>{{ assessment.totalMarks }}</td>
+                <td>{{ assessment.score }}</td>
+                <td>
+                  <span
+                    [ngClass]="{
+                      'text-success':
+                        assessment.score >= (assessment.totalMarks ?? 1) * 0.5,
+                      'text-danger':
+                        assessment.score < (assessment.totalMarks ?? 1) * 0.5
+                    }"
+                  >
+                    {{
+                      assessment.score >= (assessment.totalMarks ?? 1) * 0.5
+                        ? "Pass"
+                        : "Fail"
+                    }}
+                  </span>
+                </td>
+                <td>
+                  <button
+                    class="btn btn-primary"
+                    (click)="seeResults(assessment.id)"
+                  >
+                    View Details
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="col-md-12">
+          <div class="card mb-4 shadow-sm" *ngIf="submitted">
+            <div class="card-header">
+              <h4 class="my-0 font-weight-normal">Assessment-Analysis</h4>
+            </div>
+            <div class="card-body" id="pdfContent">
+              <canvasjs-chart
+                id="chartContainer"
+                [options]="chartOptions"
+                [styles]="{ width: '100%', height: '360px' }"
+              ></canvasjs-chart>
+              <button (click)="generateReport()" class="btn btn-secondary">
+                Download PDF
+              </button>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+</main>
